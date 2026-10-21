@@ -1,0 +1,13 @@
+# Build inputs (edit these, never dist/)
+site/
+course_img/
+course/_content/
+
+# Generated -- rebuild with: python course/_build/_check.py
+dist/
+
+# Windows / editor noise
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
