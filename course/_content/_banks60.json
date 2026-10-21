@@ -1,0 +1,2410 @@
+{
+ "37": [
+  {
+   "q": "What is a game, at its most basic level?",
+   "opts": [
+    "A story told with graphics",
+    "A set of interacting systems and rules",
+    "A collection of levels",
+    "A physics simulation"
+   ],
+   "correct": 1,
+   "why": "A game is systems: rules that take input and produce output. Story and levels are content built on top of those systems.",
+   "wrongWhy": "The other answers are things a game can contain, but none of them is what makes it a game. A story without interacting systems is a film."
+  },
+  {
+   "q": "What is a 'system' in game design?",
+   "opts": [
+    "A single level",
+    "Anything that takes an input, applies a rule, and produces an output",
+    "The game's engine",
+    "A group of enemies"
+   ],
+   "correct": 1,
+   "why": "A system is an input, a rule, and an output. Jump, enemy contact, and economy are all systems.",
+   "wrongWhy": "An engine runs the game but is not itself a design system, and a level is content, not a rule."
+  },
+  {
+   "q": "Why design systems instead of scenes?",
+   "opts": [
+    "Systems are easier to draw",
+    "A system is a rule you can tune with one number; a scene is fixed content",
+    "Scenes are more fun to build",
+    "Systems load faster"
+   ],
+   "correct": 1,
+   "why": "Tuning one number in a system changes the whole game. Changing a scene only changes that scene.",
+   "wrongWhy": "The other answers describe preferences or performance, not the design advantage of rules over fixed content."
+  },
+  {
+   "q": "What is the core loop?",
+   "opts": [
+    "The longest level in the game",
+    "The shortest cycle of actions the player repeats",
+    "The main menu flow",
+    "The final boss fight"
+   ],
+   "correct": 1,
+   "why": "The core loop is the repeated cycle: move, fight, collect, upgrade, repeat. Everything else feeds it or interrupts it.",
+   "wrongWhy": "The other answers are single moments or screens, not the repeating cycle the player spends most of their time in."
+  },
+  {
+   "q": "A good core loop has three parts. What are they?",
+   "opts": [
+    "Menu, play, credits",
+    "Intro, middle, end",
+    "Goal, obstacle, reward",
+    "Tutorial, level, boss"
+   ],
+   "correct": 2,
+   "why": "Goal, obstacle, reward. Kill the enemy (goal), it shoots back (obstacle), it drops coins (reward).",
+   "wrongWhy": "The other lists describe structure or screens, not the three functional parts of a repeating loop."
+  },
+  {
+   "q": "What is the most common core-loop mistake?",
+   "opts": [
+    "Making the loop too short",
+    "A loop that is fun for thirty seconds and then repeats identically forever",
+    "Having too many rewards",
+    "Making the goal unclear"
+   ],
+   "correct": 1,
+   "why": "A loop with no change goes flat. The fix is not more content but making the reward change the next loop.",
+   "wrongWhy": "The other options are not the core problem: length, reward count, and clarity are separate issues."
+  },
+  {
+   "q": "What makes a reward actually a reward?",
+   "opts": [
+    "It is rare",
+    "It changes what the player does next",
+    "It makes a sound",
+    "It is displayed prominently"
+   ],
+   "correct": 1,
+   "why": "If the reward does not change the next loop, it is just a score. A real reward alters the player's options.",
+   "wrongWhy": "The other answers are presentation or rarity, which do not change the player's behaviour."
+  },
+  {
+   "q": "What is 'juice' in games?",
+   "opts": [
+    "A drink power-up",
+    "The extra layer of feedback on top of the mechanics",
+    "High-quality graphics",
+    "Fast movement"
+   ],
+   "correct": 1,
+   "why": "Juice is feedback: screen shake, hitstop, particles, sound, anticipation. It changes how the game feels without changing the rules.",
+   "wrongWhy": "The other answers are content or performance, not the feedback layer that makes events feel impactful."
+  },
+  {
+   "q": "Which of these gives the most game feel for the least effort?",
+   "opts": [
+    "Detailed textures",
+    "Screen shake",
+    "Complex particle systems",
+    "Realistic lighting"
+   ],
+   "correct": 1,
+   "why": "Screen shake has the highest impact-to-effort ratio in games. A tiny camera offset on impact reads as weight.",
+   "wrongWhy": "The other options are expensive visual work that changes little about how the game feels to play."
+  },
+  {
+   "q": "What is 'anticipation' in animation?",
+   "opts": [
+    "A long wind-up animation",
+    "Making the character crouch for a few frames before jumping",
+    "Playing a sound before an event",
+    "A cutscene before a fight"
+   ],
+   "correct": 1,
+   "why": "Anticipation is a small preparatory motion before the main action. The player's eye follows the intent, not the movement.",
+   "wrongWhy": "The other answers are longer or unrelated; anticipation is a few frames, not a whole animation or scene."
+  },
+  {
+   "q": "What should you NOT do with juice?",
+   "opts": [
+    "Add it to important events",
+    "Use it on everything equally",
+    "Scale it by impact",
+    "Test it in isolation"
+   ],
+   "correct": 1,
+   "why": "Juice marks what matters. If a pickup and a boss death get the same reaction, the player learns nothing is special.",
+   "wrongWhy": "Adding juice to important events, scaling by impact, and testing in isolation are all correct practice."
+  },
+  {
+   "q": "What are the two engines that keep players playing?",
+   "opts": [
+    "Graphics and sound",
+    "Mastery and curiosity",
+    "Levels and bosses",
+    "Coins and upgrades"
+   ],
+   "correct": 1,
+   "why": "Mastery: I am getting better and can feel it. Curiosity: I want to know what happens next.",
+   "wrongWhy": "The other answers are features or content. Only mastery and curiosity are the psychological drivers."
+  },
+  {
+   "q": "What does 'mastery' need to work?",
+   "opts": [
+    "A scoreboard",
+    "Clear goals, immediate feedback, and difficulty that rises with skill",
+    "Many levels",
+    "A long story"
+   ],
+   "correct": 1,
+   "why": "Mastery is served by clear goals, immediate feedback, and a rising challenge. Without those the player cannot feel improvement.",
+   "wrongWhy": "The other answers are optional content. A scoreboard or a long story does not create the feeling of getting better."
+  },
+  {
+   "q": "What does 'curiosity' need?",
+   "opts": [
+    "More levels",
+    "Information revealed slowly, with questions left unanswered",
+    "Better graphics",
+    "Faster movement"
+   ],
+   "correct": 1,
+   "why": "Curiosity comes from unanswered questions. Revealing everything immediately removes it.",
+   "wrongWhy": "The other answers are content or polish; only slow revelation and unanswered questions create curiosity."
+  },
+  {
+   "q": "Why do close losses keep players playing?",
+   "opts": [
+    "They feel skill-based",
+    "They feel like 'almost', so a different choice would have worked",
+    "They are short",
+    "They give rewards"
+   ],
+   "correct": 1,
+   "why": "A 9-10 loss feels like 'almost'. A 0-10 loss feels hopeless. Close losses invite another attempt.",
+   "wrongWhy": "The other answers do not address the psychology: the feeling of near-success is what drives the retry."
+  },
+  {
+   "q": "What is the real difficulty dial in most platformers?",
+   "opts": [
+    "Enemy speed",
+    "Checkpoint spacing",
+    "Player jump height",
+    "Number of enemies"
+   ],
+   "correct": 1,
+   "why": "How far back the player restarts is what makes a platformer feel hard or fair. It costs progress, not dignity.",
+   "wrongWhy": "The other options change challenge but not the felt difficulty as directly as how far back you restart."
+  },
+  {
+   "q": "What is the best order of difficulty dials by usefulness?",
+   "opts": [
+    "Health, speed, spawn rate",
+    "Enemy speed, health and damage, reaction windows, resources, checkpoints",
+    "Checkpoints, health, speed",
+    "Spawn rate, health, speed"
+   ],
+   "correct": 1,
+   "why": "Enemy speed is the biggest dial because it changes how much time the player has to react, which changes everything.",
+   "wrongWhy": "The other orders put the smaller dials first. Speed dominates because it affects every encounter."
+  },
+  {
+   "q": "Why is a 'ramp' of difficulty worse than a 'staircase'?",
+   "opts": [
+    "A ramp is too hard",
+    "A ramp has no landings, so the player never gets to consolidate a new skill",
+    "A staircase is slower",
+    "A ramp is more boring to draw"
+   ],
+   "correct": 1,
+   "why": "Staircase means rise, then land. The landing is where the player masters the new thing before the next challenge.",
+   "wrongWhy": "The other answers are not about learning: a ramp fails because it denies the player consolidation time."
+  },
+  {
+   "q": "What is the 'landing' in a difficulty staircase?",
+   "opts": [
+    "The end of the level",
+    "A place where the player practises the new skill without being punished for it",
+    "A safe room",
+    "The checkpoint"
+   ],
+   "correct": 1,
+   "why": "The landing is deliberate practice time. Without it the player is always slightly behind the difficulty.",
+   "wrongWhy": "A safe room or checkpoint is a physical place; the landing is a design beat in the difficulty curve."
+  },
+  {
+   "q": "What is the three-beat pattern for teaching a mechanic?",
+   "opts": [
+    "Introduce, repeat, reward",
+    "Safe introduction, test, twist",
+    "Text, practice, exam",
+    "Show, hide, show again"
+   ],
+   "correct": 1,
+   "why": "Safe introduction (nothing can go wrong), test (they must use it to proceed), twist (it combines with something known).",
+   "wrongWhy": "The other patterns miss the essential middle beat: the test that forces the player to actually use the mechanic."
+  },
+  {
+   "q": "Why do good games avoid text tutorials?",
+   "opts": [
+    "Text is expensive to translate",
+    "A level that teaches is more effective than one that explains",
+    "Players cannot read",
+    "Text slows the game down"
+   ],
+   "correct": 1,
+   "why": "Designing rooms, not tutorials. The player learns by doing, and the geometry carries the lesson.",
+   "wrongWhy": "The other answers are practical concerns. The real reason is that learning by doing is more effective."
+  },
+  {
+   "q": "What is 'affordance'?",
+   "opts": [
+    "The price of an item",
+    "What an object visually invites the player to do",
+    "The player's skill level",
+    "How fast an animation plays"
+   ],
+   "correct": 1,
+   "why": "A red barrel invites being shot. A ledge invites jumping. The object's look should tell the player what to do with it.",
+   "wrongWhy": "The other answers are unrelated; affordance is about visual invitation, not cost, skill, or speed."
+  },
+  {
+   "q": "What is 'readability' in level design?",
+   "opts": [
+    "How fast the player reads text",
+    "Whether the player can see the important thing at a glance",
+    "The font size of the UI",
+    "How many colours the level uses"
+   ],
+   "correct": 1,
+   "why": "Readability means the player can identify the next action instantly. Contrast and clear silhouettes create it.",
+   "wrongWhy": "The other answers are about text or colour count, not about whether the important thing is visible."
+  },
+  {
+   "q": "The classic beginner level problem is:",
+   "opts": [
+    "Too many enemies",
+    "Visually rich but mechanically unreadable",
+    "Too few colours",
+    "Too short"
+   ],
+   "correct": 1,
+   "why": "Players do not fail from lack of skill — they fail because the game hid the information they needed.",
+   "wrongWhy": "The other options are not the classic failure. Density and length are separate issues from readability."
+  },
+  {
+   "q": "What must the first 60 seconds contain?",
+   "opts": [
+    "A long cutscene",
+    "A clear goal, one success, and one moment of curiosity",
+    "A boss fight",
+    "A tutorial screen"
+   ],
+   "correct": 1,
+   "why": "Players decide in the first minute whether they stay. Goal, success, curiosity is the reliable recipe.",
+   "wrongWhy": "The other answers are slow or demanding openings. A cutscene or boss fight delays the player's first success."
+  },
+  {
+   "q": "What is the most common opening mistake?",
+   "opts": [
+    "Starting too fast",
+    "A slow opening — walking, reading, watching — before the game starts",
+    "Too many enemies",
+    "No music"
+   ],
+   "correct": 1,
+   "why": "By the time the game starts, the player has already left. Cut the opening; you can always add it back.",
+   "wrongWhy": "The other answers are not opening-specific failures. Speed, enemies, and music are separate concerns."
+  },
+  {
+   "q": "Why do games have quiet rooms between fights?",
+   "opts": [
+    "To save development time",
+    "They are the release that makes the tension meaningful",
+    "To let the player rest",
+    "To show off the art"
+   ],
+   "correct": 1,
+   "why": "Tension needs release. Without the quiet, the fight stops feeling intense and the player goes numb.",
+   "wrongWhy": "The other answers misunderstand pacing. The release is a design tool, not a cost saving or a rest area."
+  },
+  {
+   "q": "If every section of a game is equally intense, what happens?",
+   "opts": [
+    "The game feels exciting",
+    "None of it feels intense",
+    "The game feels long",
+    "The player gets tired"
+   ],
+   "correct": 1,
+   "why": "Equal intensity everywhere is the same as no intensity anywhere. Contrast is what creates the feeling.",
+   "wrongWhy": "The other answers are not consequences of flat intensity. The loss of contrast is the direct result."
+  },
+  {
+   "q": "What is the rule about player actions and reactions?",
+   "opts": [
+    "Only important actions need reactions",
+    "Every action must have a visible reaction, even a failed one",
+    "Reactions are optional",
+    "Only successful actions need reactions"
+   ],
+   "correct": 1,
+   "why": "If the player cannot tell 'it worked' from 'it did nothing', the game has lied to them.",
+   "wrongWhy": "The other answers allow silent failures, which is exactly the problem the rule prevents."
+  },
+  {
+   "q": "What are the three rules of a good death?",
+   "opts": [
+    "Slow, dramatic, punishing",
+    "Readable, caused by the player's choice, fast to restart",
+    "Random, quick, silent",
+    "Long, explainable, rewarding"
+   ],
+   "correct": 1,
+   "why": "The player should see what killed them, understand it was their decision, and restart quickly.",
+   "wrongWhy": "The other answers either hide the cause or make the player wait, both of which feel unfair."
+  },
+  {
+   "q": "What is 'i-frames'?",
+   "opts": [
+    "A type of enemy",
+    "Invincibility frames after taking damage, preventing one swing draining a full health bar",
+    "A slow-motion effect",
+    "An inventory screen"
+   ],
+   "correct": 1,
+   "why": "Without i-frames a single enemy attack can hit multiple times in one swing and drain the whole bar.",
+   "wrongWhy": "The other answers are unrelated systems. I-frames exist specifically to prevent multi-hit damage."
+  },
+  {
+   "q": "Why should the hurtbox be slightly smaller than the sprite?",
+   "opts": [
+    "It looks better",
+    "It makes the game feel forgiving when the player visually missed",
+    "It is faster to compute",
+    "It makes the sprite smaller"
+   ],
+   "correct": 1,
+   "why": "If the art says 'I clearly missed' but the box says 'hit', the player blames the game. A smaller box avoids that.",
+   "wrongWhy": "The other answers are not the reason. The forgiveness is a feel decision, not a performance or size one."
+  },
+  {
+   "q": "What makes a telegraphed attack fair?",
+   "opts": [
+    "It is slow",
+    "The player can see it coming and respond",
+    "It does less damage",
+    "It is short"
+   ],
+   "correct": 1,
+   "why": "A telegraphed attack gives the player information. Fairness comes from information, not from weakness.",
+   "wrongWhy": "The other answers change the numbers but not the fairness. An untelegraphed fast attack is still unfair."
+  },
+  {
+   "q": "What is the cheapest way to make an enemy more interesting?",
+   "opts": [
+    "Draw a new sprite",
+    "Give it three states: idle, telegraph, attack",
+    "Make it faster",
+    "Add more health"
+   ],
+   "correct": 1,
+   "why": "Three states with visible telegraphs create depth. Combinations of simple enemies beat new art.",
+   "wrongWhy": "The other answers are numbers or art. States add behaviour, which is what the player actually reads."
+  },
+  {
+   "q": "What is depth in game design, according to this course?",
+   "opts": [
+    "Many enemy types",
+    "Combinations of simple systems creating new encounters without new assets",
+    "Long levels",
+    "Complex controls"
+   ],
+   "correct": 1,
+   "why": "A fast enemy plus a ranged enemy in the same room is a new encounter without a new asset.",
+   "wrongWhy": "The other answers add content or complexity. Depth is about combinations, not volume."
+  },
+  {
+   "q": "What is progression's job?",
+   "opts": [
+    "To make the game longer",
+    "To answer 'why am I still playing?' with something visible and slightly ahead",
+    "To show off the art",
+    "To fill the level"
+   ],
+   "correct": 1,
+   "why": "Progression must be visible, regular, and slightly ahead. Players quit in the gaps, not at the hard parts.",
+   "wrongWhy": "The other answers are not the function of progression. Length and display are side effects, not the purpose."
+  },
+  {
+   "q": "What rhythm of rewards works best?",
+   "opts": [
+    "One large reward at the end",
+    "Small rewards every few minutes, a medium one per level, a large one at the end",
+    "Only small rewards",
+    "Random rewards with no pattern"
+   ],
+   "correct": 1,
+   "why": "The small-medium-large rhythm keeps the player moving. A long gap with nothing is where players quit.",
+   "wrongWhy": "The other answers either create a long empty gap or remove the sense of accumulating progress."
+  },
+  {
+   "q": "What makes a currency into a real economy?",
+   "opts": [
+    "A high price",
+    "At least two competing uses for the same resource",
+    "A shop interface",
+    "Many item types"
+   ],
+   "correct": 1,
+   "why": "With one use there is no economy, only a queue. Two competing uses force a real choice.",
+   "wrongWhy": "The other answers are presentation or volume. Without a trade-off there is no decision to make."
+  },
+  {
+   "q": "What should an upgrade ideally change?",
+   "opts": [
+    "The player's damage number",
+    "How the player plays",
+    "The sprite size",
+    "The level length"
+   ],
+   "correct": 1,
+   "why": "A jump that goes further changes your routes. A bigger number changes nothing about how the game plays.",
+   "wrongWhy": "The other answers are cosmetic or numeric. The best upgrades change decisions, not values."
+  },
+  {
+   "q": "Why use a state machine?",
+   "opts": [
+    "It looks professional",
+    "It replaces a tangle of if-statements with a list of states and the rules between them",
+    "It runs faster",
+    "It is required by the engine"
+   ],
+   "correct": 1,
+   "why": "A state machine lets you see every state and every transition in one place. Bugs live in the transitions you forgot.",
+   "wrongWhy": "The other answers are not the benefit. The value is visibility of states and transitions."
+  },
+  {
+   "q": "Where do most state-machine bugs come from?",
+   "opts": [
+    "Broken code",
+    "A state that cannot be exited, or a transition that was never defined",
+    "Slow computers",
+    "Too many states"
+   ],
+   "correct": 1,
+   "why": "If you can get into a state you must be able to get out. Missing transitions cause soft-locks.",
+   "wrongWhy": "The other answers are not the source. The bug is almost always a missing rule, not broken logic."
+  },
+  {
+   "q": "What is the same pattern as a state machine, one level up?",
+   "opts": [
+    "The physics engine",
+    "Game flow: menu, playing, paused, game over, victory",
+    "The animation system",
+    "The save system"
+   ],
+   "correct": 1,
+   "why": "The game itself has states with entry and exit rules. The pause screen must actually pause; game over must offer a way back.",
+   "wrongWhy": "The other answers are subsystems. Game flow is the top-level state machine of the whole game."
+  },
+  {
+   "q": "What is a boss fight's design brief?",
+   "opts": [
+    "A wall to block the player",
+    "A test of everything the player has learned, using familiar mechanics under new pressure",
+    "A damage race",
+    "A showcase for new art"
+   ],
+   "correct": 1,
+   "why": "A boss that teaches is a tutorial; a boss that surprises is a wall. Familiar mechanics under new pressure is the sweet spot.",
+   "wrongWhy": "The other answers make the boss arbitrary. The brief is to test, not to block or show off."
+  },
+  {
+   "q": "Why do bosses have phases?",
+   "opts": [
+    "To make them longer",
+    "Phases give the player clear progress and let the fight escalate without becoming unfair",
+    "To use more art",
+    "To hide the health bar"
+   ],
+   "correct": 1,
+   "why": "Phases solve pacing in a long fight: visible progress plus escalation, with a natural breather between phases.",
+   "wrongWhy": "The other answers are not the reason. Phases are a pacing and fairness tool."
+  },
+  {
+   "q": "What should the final blow of a boss do?",
+   "opts": [
+    "Do the most damage",
+    "Feel different — slow it down and give the player a moment of safety",
+    "End the game",
+    "Drop the best loot"
+   ],
+   "correct": 1,
+   "why": "The player should be able to tell they won without reading the health bar. A boss that dies like a normal enemy wastes the fight.",
+   "wrongWhy": "The other answers miss the point. The final blow is about payoff, not numbers."
+  },
+  {
+   "q": "What is a state machine's minimum useful version?",
+   "opts": [
+    "A complex class hierarchy",
+    "An enum of states and a match statement in the update function",
+    "A separate script per state",
+    "A visual editor"
+   ],
+   "correct": 1,
+   "why": "An enum plus one match block is the whole pattern. Everything else is optional structure.",
+   "wrongWhy": "The other answers add machinery you do not need. The enum and the match are sufficient."
+  },
+  {
+   "q": "What is the 'twist' beat in teaching a mechanic?",
+   "opts": [
+    "A surprise enemy",
+    "The mechanic combining with something the player already knows",
+    "A harder version of the test",
+    "A reward after the test"
+   ],
+   "correct": 1,
+   "why": "The twist integrates the new skill with an existing one, so the player remembers it instead of forgetting it in isolation.",
+   "wrongWhy": "The other answers are not the twist. The twist is about combination, not difficulty or reward."
+  },
+  {
+   "q": "What is the most common reason players quit a beginner game?",
+   "opts": [
+    "It is too hard",
+    "They do not know what to do next",
+    "The graphics are bad",
+    "It is too long"
+   ],
+   "correct": 1,
+   "why": "Fix clarity before you fix balance. A confused player quits even when the difficulty is fair.",
+   "wrongWhy": "The other answers are real problems but not the most common. Confusion is the primary cause."
+  },
+  {
+   "q": "What should you do first when a section feels too hard?",
+   "opts": [
+    "Add more enemies",
+    "Add information — a telegraph, a clearer path — before changing the numbers",
+    "Reduce the player's health",
+    "Make the level shorter"
+   ],
+   "correct": 1,
+   "why": "If the player dies and says 'that was cheap', the fault is almost always missing information. Add information before adding difficulty.",
+   "wrongWhy": "The other answers change numbers or length. The problem is usually unreadability, not difficulty."
+  },
+  {
+   "q": "What is the single highest-leverage design habit mentioned in this course?",
+   "opts": [
+    "Drawing every sprite by hand",
+    "Expressing features as data instead of code",
+    "Writing long design documents",
+    "Making the game longer"
+   ],
+   "correct": 1,
+   "why": "If content is a spreadsheet row rather than a new function, you can add a hundred items cheaply.",
+   "wrongWhy": "The other answers do not scale. Data-driven content is the habit that lets a small developer do a large amount."
+  }
+ ],
+ "44": [
+  {
+   "q": "What does platformer movement feel depend on most?",
+   "opts": [
+    "Realistic physics",
+    "Three numbers: acceleration, stop speed, and jump height",
+    "The sprite size",
+    "The frame rate"
+   ],
+   "correct": 1,
+   "why": "Players feel acceleration, stop speed, and jump height. Gravity and jump height are tuned as a ratio, not independently.",
+   "wrongWhy": "The other answers are not what the player feels. Realistic physics often feels worse in a platformer."
+  },
+  {
+   "q": "What asymmetry makes a jump feel weighty?",
+   "opts": [
+    "A faster rise than fall",
+    "A faster fall than rise",
+    "Equal rise and fall",
+    "A longer jump"
+   ],
+   "correct": 1,
+   "why": "Rising gently and dropping decisively reads as weight. The asymmetry is what the player feels.",
+   "wrongWhy": "The other answers remove the asymmetry. Equal rise and fall reads as floaty and weightless."
+  },
+  {
+   "q": "What is coyote time?",
+   "opts": [
+    "A type of enemy",
+    "Letting the player jump for about 0.1 seconds after walking off a ledge",
+    "A slow-motion effect",
+    "A jump upgrade"
+   ],
+   "correct": 1,
+   "why": "Without coyote time, a jump pressed a frame too late fails and feels like the game ate the input.",
+   "wrongWhy": "The other answers are unrelated. Coyote time is a small grace window after leaving a platform."
+  },
+  {
+   "q": "What is jump buffering?",
+   "opts": [
+    "Storing jumps for later",
+    "Remembering a jump pressed slightly before landing and firing it on landing",
+    "A larger jump",
+    "A double jump"
+   ],
+   "correct": 1,
+   "why": "Without buffering, a well-timed jump on a moving platform fails silently and feels broken.",
+   "wrongWhy": "The other answers change jump power. Buffering is about remembering the input, not about strength."
+  },
+  {
+   "q": "Why do players not notice coyote time and buffering when they work?",
+   "opts": [
+    "They are invisible",
+    "They are only noticed when they are missing",
+    "They are too small to see",
+    "Players never use them"
+   ],
+   "correct": 1,
+   "why": "Players do not notice when they are there; they absolutely notice when they are not.",
+   "wrongWhy": "The other answers are wrong. These features are invisible but their absence is glaring."
+  },
+  {
+   "q": "What does variable jump height do?",
+   "opts": [
+    "Makes the jump higher",
+    "Lets a tap give a small hop and a hold give a full jump",
+    "Adds a double jump",
+    "Makes falling faster"
+   ],
+   "correct": 1,
+   "why": "The button hold time controls the height. This single change makes platforming dramatically more controllable.",
+   "wrongWhy": "The other answers add new abilities. Variable height uses the existing jump input more expressively."
+  },
+  {
+   "q": "How is variable jump height usually implemented?",
+   "opts": [
+    "By adding extra gravity while the button is released and the character is still rising",
+    "By detecting a long press",
+    "By adding a second jump",
+    "By increasing gravity"
+   ],
+   "correct": 0,
+   "why": "Extra gravity on release cuts the rise short. Done — the jump height now depends on how long the button is held.",
+   "wrongWhy": "The other answers are different mechanics. The implementation is a gravity change on release, not a new input or state."
+  },
+  {
+   "q": "What is the most important quality of a fight?",
+   "opts": [
+    "High damage numbers",
+    "Readability — the player can answer where the enemy is, what it will do, and what to do about it",
+    "Many enemies",
+    "Fast attacks"
+   ],
+   "correct": 1,
+   "why": "A fight is won or lost on readability. Damage numbers are secondary to whether the player can read the situation.",
+   "wrongWhy": "The other answers are numbers or volume. Readability determines whether the fight is fair."
+  },
+  {
+   "q": "What is a telegraph?",
+   "opts": [
+    "A cutscene",
+    "A visible wind-up before an enemy attacks",
+    "A health bar",
+    "A warning sound only"
+   ],
+   "correct": 1,
+   "why": "The wind-up IS the information. The player cannot dodge what they cannot see coming.",
+   "wrongWhy": "The other answers are not telegraphs. A sound alone is weaker; a visible wind-up is the standard."
+  },
+  {
+   "q": "Why are instant, untelegraphed attacks a mistake?",
+   "opts": [
+    "They are boring to animate",
+    "The player cannot dodge what they cannot see coming, so the fight becomes memorisation",
+    "They cost more memory",
+    "They look bad"
+   ],
+   "correct": 1,
+   "why": "Without information the fight is a memory test rather than a skill test. Telegraphs convert it into a fair fight.",
+   "wrongWhy": "The other answers are presentation or performance. The problem is fairness, not appearance."
+  },
+  {
+   "q": "What do hitbox and hurtbox mean?",
+   "opts": [
+    "The sprite and the shadow",
+    "The attacker's damage area and the defender's vulnerable area",
+    "Two health bars",
+    "The weapon and the shield"
+   ],
+   "correct": 1,
+   "why": "The attacker has a hitbox; the defender has a hurtbox. Keeping the hurtbox smaller than the sprite makes the game feel forgiving.",
+   "wrongWhy": "The other answers are unrelated. The two boxes are the collision areas, not the visuals or the UI."
+  },
+  {
+   "q": "What happens without invincibility frames?",
+   "opts": [
+    "The player cannot move",
+    "A single enemy attack can hit multiple times in one swing and drain a full health bar",
+    "The game slows down",
+    "The enemy becomes invincible"
+   ],
+   "correct": 1,
+   "why": "Without i-frames one swing can apply damage every frame it overlaps, which drains the whole bar instantly.",
+   "wrongWhy": "The other answers are unrelated. I-frames exist specifically to prevent multi-hit damage."
+  },
+  {
+   "q": "What is the best way to make a crowd feel busy?",
+   "opts": [
+    "Complex AI for each character",
+    "Density and variety — many simple characters at different speeds",
+    "Larger sprites",
+    "More dialogue"
+   ],
+   "correct": 1,
+   "why": "A crowd is many simple characters with different speeds. The illusion comes from density, not intelligence.",
+   "wrongWhy": "The other answers are expensive or unrelated. Density and variety create the illusion cheaply."
+  },
+  {
+   "q": "What is the cheapest worldbuilding in games?",
+   "opts": [
+    "A long story",
+    "An ambient character with one sprite, two waypoints, and one line",
+    "A large map",
+    "Many cutscenes"
+   ],
+   "correct": 1,
+   "why": "A villager walking between two points makes a world feel inhabited. The player's brain fills in the rest.",
+   "wrongWhy": "The other answers are expensive content. Ambient life costs almost nothing and changes how the game feels."
+  },
+  {
+   "q": "What makes an NPC memorable?",
+   "opts": [
+    "Complex behaviour",
+    "One rule or quirk, consistently applied",
+    "A long name",
+    "A large sprite"
+   ],
+   "correct": 1,
+   "why": "Players remember NPCs with one quirk far longer than NPCs with complex behaviour.",
+   "wrongWhy": "The other answers add cost without memorability. One quirk is enough."
+  },
+  {
+   "q": "Why keep crowds away from the critical path?",
+   "opts": [
+    "They are expensive",
+    "Crowds that block the route turn atmosphere into frustration",
+    "They look bad",
+    "They are hard to animate"
+   ],
+   "correct": 1,
+   "why": "Ambient characters should never be required for progression, and they must not be able to block it.",
+   "wrongWhy": "The other answers are not the reason. The problem is gameplay blocking, not cost or appearance."
+  },
+  {
+   "q": "What is the layering principle for density?",
+   "opts": [
+    "All characters interactive",
+    "A few characters close and interactive, many far away and decorative",
+    "All characters far away",
+    "All characters identical"
+   ],
+   "correct": 1,
+   "why": "Near characters interact; far characters decorate. The far ones can be cheaper because the player looks at them less.",
+   "wrongWhy": "The other answers waste budget. Cheap far characters plus a few detailed near ones is the efficient split."
+  },
+  {
+   "q": "What is the failure mode of a progression system?",
+   "opts": [
+    "Too many rewards",
+    "A long gap with nothing, where the player quits",
+    "Too many upgrades",
+    "Too much currency"
+   ],
+   "correct": 1,
+   "why": "Players do not quit at hard parts — they quit at empty parts. The gap is the problem.",
+   "wrongWhy": "The other answers are excess, not failure. Too many rewards is a balance issue, not a retention failure."
+  },
+  {
+   "q": "Why should an upgrade change how the player plays?",
+   "opts": [
+    "It looks better",
+    "A bigger number changes nothing; a new route or option changes decisions",
+    "It costs less",
+    "It is easier to balance"
+   ],
+   "correct": 1,
+   "why": "A jump that goes further changes your routes. A bigger damage number changes nothing about how the game plays.",
+   "wrongWhy": "The other answers are not the reason. The value is in changing decisions, not in bigger numbers."
+  },
+  {
+   "q": "What is the minimum for a real economy?",
+   "opts": [
+    "A shop",
+    "Two competing uses for the same resource",
+    "Many items",
+    "A currency symbol"
+   ],
+   "correct": 1,
+   "why": "With one use there is no economy, only a queue. Two competing uses force a real trade-off.",
+   "wrongWhy": "The other answers are presentation or volume. Without a trade-off there is no decision."
+  },
+  {
+   "q": "What is the purpose of a boss's phase change?",
+   "opts": [
+    "To make the fight longer",
+    "Both escalation and a breather for the player",
+    "To show new art",
+    "To hide the health bar"
+   ],
+   "correct": 1,
+   "why": "Phases give visible progress, escalate the pressure, and provide a natural release between phases.",
+   "wrongWhy": "The other answers are not the purpose. A phase change is a pacing and fairness tool."
+  },
+  {
+   "q": "What should a boss's final blow do?",
+   "opts": [
+    "Deal the most damage",
+    "Feel different, with a distinct animation and a moment of safety",
+    "Drop loot",
+    "End the level"
+   ],
+   "correct": 1,
+   "why": "The player should be able to tell they won without the health bar. A boss that dies like a normal enemy wastes the fight.",
+   "wrongWhy": "The other answers are not the purpose. The final blow is the payoff for the whole fight."
+  },
+  {
+   "q": "What is the design brief for a boss fight?",
+   "opts": [
+    "A wall",
+    "A test of everything the player has learned",
+    "A damage race",
+    "An art showcase"
+   ],
+   "correct": 1,
+   "why": "A boss that teaches is a tutorial; a boss that surprises is a wall. Familiar mechanics under new pressure is the sweet spot.",
+   "wrongWhy": "The other answers make the boss arbitrary rather than a test."
+  },
+  {
+   "q": "What does 'depth' mean in this course?",
+   "opts": [
+    "Many enemy types",
+    "Combinations of simple systems creating new encounters without new assets",
+    "Long levels",
+    "Complex controls"
+   ],
+   "correct": 1,
+   "why": "A fast enemy plus a ranged enemy in the same room is a new encounter without a new asset.",
+   "wrongWhy": "The other answers add volume or complexity. Depth is combinations, not quantity."
+  },
+  {
+   "q": "What is the state machine's main benefit?",
+   "opts": [
+    "Speed",
+    "Visibility: you can see every state and every transition in one place",
+    "It looks professional",
+    "It is required"
+   ],
+   "correct": 1,
+   "why": "Bugs live in the transitions you forgot. A state machine puts all of them in front of you.",
+   "wrongWhy": "The other answers are not the benefit. The value is seeing the whole behaviour at a glance."
+  },
+  {
+   "q": "What causes most state-machine bugs?",
+   "opts": [
+    "Broken code",
+    "A state with no exit, or an undefined transition",
+    "Slow hardware",
+    "Too many states"
+   ],
+   "correct": 1,
+   "why": "If you can get into a state you must be able to get out. Missing rules cause soft-locks.",
+   "wrongWhy": "The other answers are not the source. Missing transitions are the usual cause."
+  },
+  {
+   "q": "What is the highest impact-to-effort juice technique?",
+   "opts": [
+    "Screen shake",
+    "Detailed particles",
+    "Realistic lighting",
+    "Complex animation"
+   ],
+   "correct": 0,
+   "why": "A tiny camera offset on impact reads as weight. It is cheap to add and immediately noticeable.",
+   "wrongWhy": "The other answers are expensive for the effect they give. Shake gives the most feel per line of code."
+  },
+  {
+   "q": "What does hitstop communicate?",
+   "opts": [
+    "That the game is slow",
+    "Force and impact — a brief freeze reads as weight",
+    "That the player is damaged",
+    "That a cutscene is starting"
+   ],
+   "correct": 1,
+   "why": "A 60-80 millisecond freeze on a heavy hit reads as force even though the rules never changed.",
+   "wrongWhy": "The other answers are not what the freeze communicates. It is about impact, not speed or damage."
+  },
+  {
+   "q": "Why layer two sounds onto one event?",
+   "opts": [
+    "To make it louder",
+    "The combination reads as heavier than either sound alone",
+    "To fill silence",
+    "To use more memory"
+   ],
+   "correct": 1,
+   "why": "A low thud plus a high crack reads as one heavy impact. Layering is a cheap way to add weight.",
+   "wrongWhy": "The other answers are not the reason. Layering creates a richer single impression."
+  },
+  {
+   "q": "Why vary the pitch of a repeated sound?",
+   "opts": [
+    "It sounds better",
+    "A sound that repeats identically gets tuned out by the player's brain",
+    "It is required",
+    "To save space"
+   ],
+   "correct": 1,
+   "why": "Every repeated sound must vary slightly or the player stops hearing it. A few percent of random variation is enough.",
+   "wrongWhy": "The other answers are not the reason. The problem is the brain filtering out identical repeats."
+  },
+  {
+   "q": "What is silence used for in sound design?",
+   "opts": [
+    "To save space",
+    "A moment of silence after a big event makes the following sound land harder",
+    "To indicate a bug",
+    "To mark a cutscene"
+   ],
+   "correct": 1,
+   "why": "Silence is a tool. Removing all sound briefly after a big event increases the impact of the next one.",
+   "wrongWhy": "The other answers misunderstand the purpose. Silence is deliberate, not an absence."
+  },
+  {
+   "q": "What is parallax?",
+   "opts": [
+    "A shader effect",
+    "Moving background layers at different speeds to create depth",
+    "A camera effect",
+    "A type of enemy"
+   ],
+   "correct": 1,
+   "why": "Parallax is the cheapest depth in games: different speeds per layer read as three-dimensional space.",
+   "wrongWhy": "The other answers are different techniques. Parallax is specifically about layer speeds."
+  },
+  {
+   "q": "What does a vignette communicate?",
+   "opts": [
+    "That the level is dark",
+    "Low health or tension — darkening the screen edges",
+    "That a cutscene is starting",
+    "That the player is hidden"
+   ],
+   "correct": 1,
+   "why": "Darkening the edges when the player is low on health adds free tension without any new art.",
+   "wrongWhy": "The other answers are not what the vignette signals. It is a state indicator, not an environment effect."
+  },
+  {
+   "q": "What is 'camera lead'?",
+   "opts": [
+    "Moving the camera ahead of the player",
+    "Moving the camera slightly in the direction the player is moving so they can see what is coming",
+    "A following camera",
+    "A zoomed-in camera"
+   ],
+   "correct": 1,
+   "why": "Leading the camera lets the player see what is coming in the direction they are moving. It is a one-line change.",
+   "wrongWhy": "The other answers describe other camera behaviours. Lead is specifically about looking ahead."
+  },
+  {
+   "q": "What is the principle behind 'squash and stretch'?",
+   "opts": [
+    "Make it look bigger",
+    "Volume stays roughly constant, so squashing wide also squashes short",
+    "Stretch on landing",
+    "Scale randomly"
+   ],
+   "correct": 1,
+   "why": "When you squash wide you also squash short, and vice versa. Keeping volume constant reads as weight.",
+   "wrongWhy": "The other answers are not the principle. Random scaling or one-directional stretching looks wrong."
+  },
+  {
+   "q": "Why animate a state change rather than the object?",
+   "opts": [
+    "It is cheaper",
+    "A door that tweens open communicates more than a door with a twelve-frame animation",
+    "It is easier to code",
+    "It looks smoother"
+   ],
+   "correct": 1,
+   "why": "Animating the transition communicates the change. The player reads the state, not the artwork.",
+   "wrongWhy": "The other answers are not the reason. The communication value is the point."
+  },
+  {
+   "q": "What is the test for whether an ambient character is well designed?",
+   "opts": [
+    "It has complex AI",
+    "It has one rule and a route, and never blocks progression",
+    "It has dialogue",
+    "It has a large sprite"
+   ],
+   "correct": 1,
+   "why": "Ambient characters cost one sprite and two waypoints. If they can block the player's route, they are a bug, not a world.",
+   "wrongWhy": "The other answers add cost. The test is simplicity plus not interfering with play."
+  },
+  {
+   "q": "What is the three-state pattern for an enemy?",
+   "opts": [
+    "Idle, run, attack",
+    "Idle, telegraph, attack",
+    "Spawn, chase, die",
+    "Patrol, notice, flee"
+   ],
+   "correct": 1,
+   "why": "Three states with a visible telegraph on each create readable depth without new art.",
+   "wrongWhy": "The other answers lack the telegraph. The telegraph is what makes the third state fair."
+  },
+  {
+   "q": "Why is a fast enemy plus a ranged enemy a new encounter?",
+   "opts": [
+    "It uses two sprites",
+    "The combination creates pressure neither creates alone, without needing new art",
+    "It is harder to code",
+    "It looks better"
+   ],
+   "correct": 1,
+   "why": "Combinations create depth. The player faces a new problem using assets you already have.",
+   "wrongWhy": "The other answers are not the reason. Depth comes from the combination, not from more content."
+  },
+  {
+   "q": "What is the rule about what to cut first?",
+   "opts": [
+    "The core loop",
+    "Extra enemy types, dialogue, save systems, and side content",
+    "The menu",
+    "The game-over screen"
+   ],
+   "correct": 1,
+   "why": "Cut extras first. Never cut the core loop, the menu, or the game-over screen.",
+   "wrongWhy": "The other answers list things that must never be cut. They are the minimum viable game."
+  },
+  {
+   "q": "What is the test for whether a feature can be cut?",
+   "opts": [
+    "It is expensive",
+    "Does removing it change what the player does? If not, it can go",
+    "It is hard to make",
+    "It is not fun"
+   ],
+   "correct": 1,
+   "why": "A second enemy type that behaves identically is not content. If removal changes nothing, it was never a feature.",
+   "wrongWhy": "The other answers are not the test. Cost and difficulty are not the same as lack of impact."
+  },
+  {
+   "q": "What is the iteration loop?",
+   "opts": [
+    "Plan, build, release",
+    "Build a tiny thing, play it, change it, play it again",
+    "Design, code, test",
+    "Sketch, draw, animate"
+   ],
+   "correct": 1,
+   "why": "Short cycles with immediate playtesting surface problems early. Playing is the feedback.",
+   "wrongWhy": "The other answers are longer cycles or skip the playing step. The loop only works if you play each pass."
+  },
+  {
+   "q": "How many goals should one iteration pass have?",
+   "opts": [
+    "One",
+    "As many as fit",
+    "Five",
+    "None"
+   ],
+   "correct": 0,
+   "why": "One goal per pass, such as 'make the jump feel better'. 'Improve the game' is not a pass.",
+   "wrongWhy": "The other answers make the pass unmeasurable. A single goal lets you know whether it worked."
+  },
+  {
+   "q": "What does 'playable beats planned' mean?",
+   "opts": [
+    "Skip planning entirely",
+    "A rough playable build every week teaches more than a perfect design document",
+    "Play the game instead of making it",
+    "Plan less carefully"
+   ],
+   "correct": 1,
+   "why": "A game you have not played in a month has problems you cannot see, and they compound.",
+   "wrongWhy": "The other answers misunderstand. Planning still happens, but the playable build is the source of truth."
+  },
+  {
+   "q": "What is the most important habit in this course?",
+   "opts": [
+    "Drawing every sprite",
+    "Finishing something small",
+    "Writing long documents",
+    "Making large games"
+   ],
+   "correct": 1,
+   "why": "One finished game teaches more than five abandoned ones, because finishing includes the parts tutorials skip.",
+   "wrongWhy": "The other answers are not the habit. Finishing is the skill that makes all the others usable."
+  },
+  {
+   "q": "Why is the export build important to test?",
+   "opts": [
+    "It is faster",
+    "Missing assets, broken paths, and audio that only works in the editor appear exclusively in the export",
+    "It is required by stores",
+    "It looks better"
+   ],
+   "correct": 1,
+   "why": "The export is what the player gets. Problems that do not reproduce in the editor will reproduce for players.",
+   "wrongWhy": "The other answers are not the reason. The export is the real product, not the editor view."
+  },
+  {
+   "q": "What is the three-state pattern for a player character, in the standard order?",
+   "opts": [
+    "Idle, run, jump, attack, hurt, dead",
+    "Run, idle, jump, dead, hurt, attack",
+    "Dead, hurt, attack, jump, run, idle",
+    "Any order is fine"
+   ],
+   "correct": 0,
+   "why": "The standard set is idle, run, jump, attack, hurt, dead. Most forgotten transition: hurt must always return to idle.",
+   "wrongWhy": "The other answers are arbitrary orders. The states matter less than having every exit defined."
+  },
+  {
+   "q": "What is the cheapest way to add depth to a fight?",
+   "opts": [
+    "New enemy art",
+    "Change the encounter — combine two existing enemy types",
+    "More health",
+    "Faster attacks"
+   ],
+   "correct": 1,
+   "why": "Design the encounter, not the monster. Combinations are free; new art is not.",
+   "wrongWhy": "The other answers change numbers or add cost. The encounter design is the cheap lever."
+  },
+  {
+   "q": "What should you do when a bug appears in a state machine?",
+   "opts": [
+    "Add another if-statement",
+    "Add the missing transition to the table first",
+    "Restart the state",
+    "Ignore it"
+   ],
+   "correct": 1,
+   "why": "Most state bugs are missing rules, not broken code. Find the missing transition before touching the logic.",
+   "wrongWhy": "The other answers patch symptoms. Adding an if adds complexity without fixing the missing rule."
+  },
+  {
+   "q": "What is the purpose of the three-state pattern?",
+   "opts": [
+    "To add more art",
+    "To create readable depth without new assets",
+    "To make enemies faster",
+    "To increase difficulty"
+   ],
+   "correct": 1,
+   "why": "Three states with visible telegraphs create depth from behaviour, which costs nothing in art.",
+   "wrongWhy": "The other options change numbers or add art. The pattern's value is behavioural depth."
+  }
+ ],
+ "51": [
+  {
+   "q": "What is the actual bar for game art?",
+   "opts": [
+    "Beautiful art",
+    "Intentional art — every choice deliberate",
+    "Many colours",
+    "Large sprites"
+   ],
+   "correct": 1,
+   "why": "Players judge consistency and readability, not complexity. Clean limited-palette art beats messy detailed art.",
+   "wrongWhy": "The other answers are about quality or quantity. The bar is whether the choices look deliberate."
+  },
+  {
+   "q": "How do you improve a silhouette?",
+   "opts": [
+    "Add more detail",
+    "Exaggerate — bigger hat, wider shoulders, longer weapon",
+    "Use more colours",
+    "Make it larger"
+   ],
+   "correct": 1,
+   "why": "Exaggerated shapes read better at small sizes. Detail is the first thing to go when the sprite is small.",
+   "wrongWhy": "The other answers add cost or clutter. Exaggeration is what survives at game size."
+  },
+  {
+   "q": "What is the recommended maximum number of colours for a beginner's palette?",
+   "opts": [
+    "Three: background, main, and one accent",
+    "As many as possible",
+    "Two",
+    "Ten"
+   ],
+   "correct": 0,
+   "why": "Background, main, one accent. The accent is reserved for things the player must notice.",
+   "wrongWhy": "The other answers either remove contrast or destroy it. Three is the rule that makes the accent work."
+  },
+  {
+   "q": "Why must the accent colour be limited?",
+   "opts": [
+    "It is cheaper",
+    "When everything is accent-coloured, nothing is",
+    "It is easier to draw",
+    "It loads faster"
+   ],
+   "correct": 1,
+   "why": "The accent marks what matters. If it is used everywhere it marks nothing.",
+   "wrongWhy": "The other answers are not the reason. The accent works by scarcity."
+  },
+  {
+   "q": "Why start pixel art at 16x16?",
+   "opts": [
+    "It is the standard size",
+    "Small canvases are forgiving — every decision is visible and nothing can hide",
+    "It is easier to export",
+    "It looks retro"
+   ],
+   "correct": 1,
+   "why": "At 16x16 a character is maybe twelve pixels. Nothing can hide, so mistakes are obvious and fixable.",
+   "wrongWhy": "The other answers are not the reason. Small size is a learning tool, not a style choice."
+  },
+  {
+   "q": "What is the correct order for drawing a pixel art character?",
+   "opts": [
+    "Shade, then outline, then colour",
+    "Silhouette, then shade, then accent",
+    "Accent, then silhouette, then shade",
+    "Outline, then shade, then silhouette"
+   ],
+   "correct": 1,
+   "why": "Block the silhouette in the main colour, carve with one shade darker and one lighter, add the accent last.",
+   "wrongWhy": "The other answers put detail before structure. The silhouette must be right before any shading is worth doing."
+  },
+  {
+   "q": "What is the shading rule that always works?",
+   "opts": [
+    "Light from below",
+    "Light comes from above, so the top edge is lighter and the bottom edge darker",
+    "Shade randomly",
+    "Use only one shade"
+   ],
+   "correct": 1,
+   "why": "You do not need to think about lighting — just follow the rule. Top lighter, bottom darker.",
+   "wrongWhy": "The other answers are not the rule. The top-lit convention is what makes shading read correctly."
+  },
+  {
+   "q": "Why does two frames at 6 fps beat six frames at 2 fps?",
+   "opts": [
+    "It looks smoother",
+    "Frame timing matters more than frame count for readability",
+    "It is easier to export",
+    "It uses less memory"
+   ],
+   "correct": 1,
+   "why": "Two frames at 6 fps reads as walking; six frames at 2 fps reads as a broken record. Timing carries the motion.",
+   "wrongWhy": "The other answers are technical. The reason is readability of the motion."
+  },
+  {
+   "q": "Why should you test animation at the game's actual size?",
+   "opts": [
+    "It is faster",
+    "Animation that looks good zoomed in often looks broken at game size",
+    "It is required",
+    "It looks more professional"
+   ],
+   "correct": 1,
+   "why": "Zoom out constantly while drawing. A walk cycle that only works large is not finished.",
+   "wrongWhy": "The other answers are not the reason. Small-size readability is the real test."
+  },
+  {
+   "q": "What are Inkscape's three essential operations?",
+   "opts": [
+    "Copy, paste, delete",
+    "Union, difference, and intersection",
+    "Rotate, scale, move",
+    "Fill, stroke, gradient"
+   ],
+   "correct": 1,
+   "why": "Union merges shapes, difference cuts one out of another, intersection keeps only the overlap. With those three you can build any icon.",
+   "wrongWhy": "The other answers are basic editing tools. The boolean operations are what make vector art construction possible."
+  },
+  {
+   "q": "Why is vector art suited to non-artists?",
+   "opts": [
+    "It looks better",
+    "It is built from primitives and combined shapes, not freehand drawing",
+    "It is faster",
+    "It is free"
+   ],
+   "correct": 1,
+   "why": "You never draw a line freehand — you move points until a shape looks right. It is construction, not drawing.",
+   "wrongWhy": "The other answers are not the reason. The construction approach is what removes the drawing skill requirement."
+  },
+  {
+   "q": "Which asset library is CC0 and commercially safe with no attribution?",
+   "opts": [
+    "OpenGameArt",
+    "Kenney.nl",
+    "itch.io",
+    "Freesound"
+   ],
+   "correct": 1,
+   "why": "Kenney.nl assets are public domain (CC0): no attribution required, commercial use allowed, no risk.",
+   "wrongWhy": "The other answers host mixed licences. OpenGameArt and itch.io files each carry their own licence and must be checked."
+  },
+  {
+   "q": "What must you do before using any asset?",
+   "opts": [
+    "Credit the author",
+    "Read the licence — 'free' and 'free to use in your game' are not the same",
+    "Resize it",
+    "Convert the format"
+   ],
+   "correct": 1,
+   "why": "Every asset has its own licence. CC0 and CC-BY are safe; CC-BY-SA has share-alike obligations; NC forbids commercial use.",
+   "wrongWhy": "The other answers are workflow steps. The licence determines whether you may use it at all."
+  },
+  {
+   "q": "Why keep an asset-credit file from day one?",
+   "opts": [
+    "It looks professional",
+    "Retroactive credit hunting is miserable — record source and licence as you go",
+    "It is required by law",
+    "It helps with organisation"
+   ],
+   "correct": 1,
+   "why": "When someone asks about an asset, you need the answer immediately. Finding licences after the fact is painful.",
+   "wrongWhy": "The other answers are not the main reason. The file exists because you will need it and cannot reconstruct it later."
+  },
+  {
+   "q": "Why should you not mix asset packs from different authors?",
+   "opts": [
+    "It is illegal",
+    "Mixed styles look bad; pick one style and stay with it",
+    "It is hard to import",
+    "It increases file size"
+   ],
+   "correct": 1,
+   "why": "Consistency comes from using one style. A game with mismatched packs looks broken even if each asset is good.",
+   "wrongWhy": "The other answers are not the reason. Visual consistency is the goal."
+  },
+  {
+   "q": "How do you get character art without drawing or modelling?",
+   "opts": [
+    "Hire an artist",
+    "Render a 3D model into a flat 2D sprite using an orthographic camera",
+    "Copy from another game",
+    "Use a photograph"
+   ],
+   "correct": 1,
+   "why": "Blender renders any model into clean, consistent sprites. Same source means consistent style for free.",
+   "wrongWhy": "The other answers are not practical for a beginner. Rendering avoids both drawing and modelling skill."
+  },
+  {
+   "q": "What is the advantage of code-drawn visuals?",
+   "opts": [
+    "They look better",
+    "They scale perfectly — a code-drawn bar looks identical at every resolution",
+    "They are faster",
+    "They are easier to animate"
+   ],
+   "correct": 1,
+   "why": "An image-based health bar must be redrawn for each resolution; a code-drawn one does not.",
+   "wrongWhy": "The other answers are not the advantage. Resolution independence is the specific benefit."
+  },
+  {
+   "q": "What is the foundation of most generated textures?",
+   "opts": [
+    "Gradients",
+    "Noise — a grid of random values smoothed together",
+    "Patterns",
+    "Photographs"
+   ],
+   "correct": 1,
+   "why": "Noise gives clouds, marble, terrain, and rust. Threshold it and you have a texture; tile it and you have a level.",
+   "wrongWhy": "The other answers are not the foundation. Noise plus a threshold is the standard technique."
+  },
+  {
+   "q": "Why is a tweened health bar better than one that snaps?",
+   "opts": [
+    "It looks smoother",
+    "The tween reads as damage; a snap reads as nothing",
+    "It is easier to code",
+    "It uses fewer sprites"
+   ],
+   "correct": 1,
+   "why": "The animation communicates the state change. The player reads the transition, not just the value.",
+   "wrongWhy": "The other answers are not the reason. The communication value is the point."
+  },
+  {
+   "q": "What is the volume rule in squash and stretch?",
+   "opts": [
+    "Make it bigger",
+    "Volume stays roughly constant, so squashing wide also squashes short",
+    "Squash on landing only",
+    "Stretch on jump only"
+   ],
+   "correct": 1,
+   "why": "Keeping volume constant reads as weight. One-directional stretching looks wrong.",
+   "wrongWhy": "The other answers are incomplete. The constant-volume rule is what makes the effect convincing."
+  },
+  {
+   "q": "What is the principle behind 'motion that implies intent'?",
+   "opts": [
+    "Animate everything",
+    "Any motion that implies intent reads as animation; the player's brain completes the rest",
+    "Use more frames",
+    "Move faster"
+   ],
+   "correct": 1,
+   "why": "A circle that wobbles while moving reads as walking. The player's brain fills in the animation.",
+   "wrongWhy": "The other answers are not the principle. The implication of intent is what creates the illusion."
+  },
+  {
+   "q": "What are the four mechanical UI rules?",
+   "opts": [
+    "Bold, italic, underline, colour",
+    "Alignment, spacing, hierarchy, contrast",
+    "Big, small, medium, tiny",
+    "Top, bottom, left, right"
+   ],
+   "correct": 1,
+   "why": "Alignment, spacing, hierarchy, contrast. All four are mechanical — you can follow them without design sense.",
+   "wrongWhy": "The other answers are not the rules. These four are the ones that make UI look designed."
+  },
+  {
+   "q": "Why is hierarchy important in UI?",
+   "opts": [
+    "It looks professional",
+    "If everything is equally prominent, nothing is",
+    "It is easier to code",
+    "It saves space"
+   ],
+   "correct": 1,
+   "why": "The most important thing must be the biggest or brightest. Equal prominence means no guidance.",
+   "wrongWhy": "The other answers are not the reason. Hierarchy is about directing attention."
+  },
+  {
+   "q": "What is the rule about text contrast?",
+   "opts": [
+    "Use light text on light backgrounds",
+    "Text must be readable at a glance — if you squint and cannot read it, it fails",
+    "Always use white text",
+    "Use the smallest font that fits"
+   ],
+   "correct": 1,
+   "why": "Readability is the requirement. Contrast must survive a glance, not a careful look.",
+   "wrongWhy": "The other answers either break readability or are not rules. Glance-readability is the standard."
+  },
+  {
+   "q": "How do you get sound effects without making any?",
+   "opts": [
+    "Record your own voice",
+    "Synthesis tools like sfxr generate effects from sliders",
+    "Copy from other games",
+    "Use silence"
+   ],
+   "correct": 1,
+   "why": "You do not need sound design knowledge to get a usable jump sound. Sliders plus a randomise button is enough.",
+   "wrongWhy": "The other answers are impractical or illegal. Synthesis is the accessible route."
+  },
+  {
+   "q": "What matters more than the quality of a sound?",
+   "opts": [
+    "Its length",
+    "That every event the player cares about has a sound, and that repeated sounds vary in pitch",
+    "Its volume",
+    "Its format"
+   ],
+   "correct": 1,
+   "why": "A badly chosen sound beats silence because it confirms the event happened. Variation prevents the brain tuning it out.",
+   "wrongWhy": "The other answers are technical. Presence and variation are what matter perceptually."
+  },
+  {
+   "q": "What is the first step in building a level?",
+   "opts": [
+    "Choose the tiles",
+    "Write the level as one sentence of beats, then build only those",
+    "Place the enemies",
+    "Design the art"
+   ],
+   "correct": 1,
+   "why": "Enter, cross the gap, fight on the platform, climb to the exit. Then build only those beats with placeholder tiles.",
+   "wrongWhy": "The other answers start too late. The beats must exist before any tile is placed."
+  },
+  {
+   "q": "Why build a level from placeholder tiles first?",
+   "opts": [
+    "It is faster",
+    "If the layout is not fun with grey boxes, no amount of art will fix it",
+    "It looks better",
+    "It is easier to export"
+   ],
+   "correct": 1,
+   "why": "Art on an unfun level is wasted art. Playability is a layout property, not an art property.",
+   "wrongWhy": "The other answers are not the reason. The layout must be proven before it is decorated."
+  },
+  {
+   "q": "What is the readability rule for walkable versus solid tiles?",
+   "opts": [
+    "They should look similar",
+    "They must be distinguishable at a glance",
+    "They should be the same colour",
+    "Solid tiles should be brighter"
+   ],
+   "correct": 1,
+   "why": "If the player cannot tell where they can walk, the level has failed before it began.",
+   "wrongWhy": "The other answers either remove the distinction or reverse it. Distinguishability is the requirement."
+  },
+  {
+   "q": "What is the 30-minute asset workflow's first step?",
+   "opts": [
+    "Add detail",
+    "Decide the silhouette and block it out in one colour",
+    "Choose colours",
+    "Export"
+   ],
+   "correct": 1,
+   "why": "Minutes 0-5 are silhouette only. No detail until the shape is right.",
+   "wrongWhy": "The other answers come later. Detail before a correct silhouette is wasted work."
+  },
+  {
+   "q": "What is the most common trap in the first five minutes?",
+   "opts": [
+    "Wrong colours",
+    "Perfectionism — refining a silhouette that will be replaced",
+    "Wrong canvas size",
+    "Too many frames"
+   ],
+   "correct": 1,
+   "why": "Block the shape first; detail comes last. Refining early is wasted effort.",
+   "wrongWhy": "The other answers are later problems. The early trap is spending detail budget on a shape that is still wrong."
+  },
+  {
+   "q": "Why decide the final sprite size before you start?",
+   "opts": [
+    "It is easier to export",
+    "A sprite drawn at 64x64 but displayed at 32x32 loses half its detail",
+    "It looks better",
+    "It is required"
+   ],
+   "correct": 1,
+   "why": "Drawing at the wrong scale wastes half the work. Decide the display size first.",
+   "wrongWhy": "The other answers are not the reason. Scale mismatch is what wastes the detail."
+  },
+  {
+   "q": "What is the secret to a consistent art set?",
+   "opts": [
+    "Hire an artist",
+    "Same palette, same shading rule, same canvas size for everything",
+    "Use only one colour",
+    "Copy from games you like"
+   ],
+   "correct": 1,
+   "why": "Consistency comes from process, not talent. Same process plus same palette equals an art style.",
+   "wrongWhy": "The other answers are not the secret. Process consistency is what produces a matching set."
+  },
+  {
+   "q": "How many things made with the same process create an art style?",
+   "opts": [
+    "One",
+    "Five",
+    "Twenty",
+    "A hundred"
+   ],
+   "correct": 1,
+   "why": "Make five things the same way and you have an art style. That is the entire secret.",
+   "wrongWhy": "The other answers are wrong quantities. Five is enough to establish a repeatable process."
+  },
+  {
+   "q": "What is the purpose of the 30-minute time limit?",
+   "opts": [
+    "To save time",
+    "It forces decisions — the limit is the point",
+    "To make it easier",
+    "To reduce quality"
+   ],
+   "correct": 1,
+   "why": "A hard time limit prevents perfectionism and forces you to ship something. The constraint is the teaching tool.",
+   "wrongWhy": "The other answers misunderstand. The limit is deliberate, not a shortcut."
+  },
+  {
+   "q": "What should you do with a finished but ugly asset?",
+   "opts": [
+    "Throw it away",
+    "Keep it — a finished ugly asset teaches more than a perfect unfinished one",
+    "Redraw it immediately",
+    "Hide it"
+   ],
+   "correct": 1,
+   "why": "Finishing teaches the process. You now have a workflow you can repeat and improve.",
+   "wrongWhy": "The other answers waste the learning. The value is in completing the loop."
+  },
+  {
+   "q": "What does 'steal like an artist' mean in this course?",
+   "opts": [
+    "Copy sprites from other games",
+    "Study how things work, then apply the principle to your own work",
+    "Use only free assets",
+    "Avoid looking at other games"
+   ],
+   "correct": 1,
+   "why": "Reference and study, do not copy. Understanding why something works lets you reproduce the effect legally and originally.",
+   "wrongWhy": "The other answers are literal or counterproductive. The rule is about studying principles, not copying assets."
+  },
+  {
+   "q": "What is the rule about using an asset whose licence you cannot find?",
+   "opts": [
+    "Use it with credit",
+    "Do not use it — there is always another asset",
+    "Use it privately",
+    "Use it in a prototype only"
+   ],
+   "correct": 1,
+   "why": "If you cannot find the licence, you cannot establish that you may use it. There is always a safe alternative.",
+   "wrongWhy": "The other answers risk infringement. An unknown licence is a forbidden asset."
+  },
+  {
+   "q": "What is the 'asset flip' that is banned on most platforms?",
+   "opts": [
+    "Resizing assets",
+    "Reselling an unmodified asset pack",
+    "Using free assets",
+    "Mixing two packs"
+   ],
+   "correct": 1,
+   "why": "Reselling unmodified assets is both unethical and against most platform rules. Adding your own work is required.",
+   "wrongWhy": "The other answers are normal practice. The banned act is reselling without transformation."
+  },
+  {
+   "q": "What is the recommended shading shortcut for pixel art?",
+   "opts": [
+    "Shade randomly",
+    "Light from above — top lighter, bottom darker",
+    "Use one shade only",
+    "Shade every pixel differently"
+   ],
+   "correct": 1,
+   "why": "Follow the convention and you do not have to think about lighting. It always reads correctly.",
+   "wrongWhy": "The other answers either remove depth or are impractical. The convention is the shortcut."
+  },
+  {
+   "q": "Why is a limited palette easier than a large one?",
+   "opts": [
+    "It is faster to load",
+    "Every colour must earn its place, so the important things stand out",
+    "It looks retro",
+    "It uses less memory"
+   ],
+   "correct": 1,
+   "why": "Restraint makes the accent work. With many colours nothing is special.",
+   "wrongWhy": "The other answers are technical. The design benefit is what restraint buys."
+  },
+  {
+   "q": "What is the correct order of the five juice techniques by value?",
+   "opts": [
+    "Sound, particles, shake, hitstop, anticipation",
+    "Shake, hitstop, particles, sound, anticipation",
+    "Anticipation, sound, particles, hitstop, shake",
+    "Particles, sound, shake, hitstop, anticipation"
+   ],
+   "correct": 1,
+   "why": "Shake and hitstop give the most feel for the least work. Start with those two.",
+   "wrongWhy": "The other answers misorder the value. Shake and hitstop are the highest ratio."
+  },
+  {
+   "q": "What is the rule about juice and importance?",
+   "opts": [
+    "Use it on everything",
+    "Juice marks what matters — do not use it everywhere",
+    "Use it only on bosses",
+    "Use it only on death"
+   ],
+   "correct": 1,
+   "why": "If a pickup and a boss death get the same reaction, the player learns nothing is special.",
+   "wrongWhy": "The other answers destroy the signalling function. Juice works by being selective."
+  },
+  {
+   "q": "What is the most important thing to test when making a character?",
+   "opts": [
+    "Its colours",
+    "The silhouette — can you tell it apart from the enemy at a glance",
+    "Its size",
+    "Its name"
+   ],
+   "correct": 1,
+   "why": "If you cannot tell characters apart from their solid outline, the player cannot read them in motion.",
+   "wrongWhy": "The other answers are secondary. Silhouette readability is the test that matters."
+  },
+  {
+   "q": "What is the advantage of rendering 3D models into 2D sprites?",
+   "opts": [
+    "It is cheaper",
+    "Same source means consistent style for free",
+    "It looks more realistic",
+    "It is faster to make"
+   ],
+   "correct": 1,
+   "why": "All frames come from one model, so they match automatically. Consistency is free.",
+   "wrongWhy": "The other answers are not the advantage. Consistency from a single source is the benefit."
+  },
+  {
+   "q": "What is the recommended way to make a character without drawing?",
+   "opts": [
+    "Trace a photograph",
+    "Design from a verb — 'fast scout' implies a small, forward-leaning silhouette",
+    "Copy a game character",
+    "Hire an artist"
+   ],
+   "correct": 1,
+   "why": "Begin with what the character does. The verb implies the silhouette, so you can build it from shapes.",
+   "wrongWhy": "The other answers are not the method. Starting from the verb is what removes the drawing requirement."
+  },
+  {
+   "q": "What is the rule about a character's distinctive feature?",
+   "opts": [
+    "Have several features",
+    "Pick one and exaggerate it",
+    "Avoid features",
+    "Copy it from another game"
+   ],
+   "correct": 1,
+   "why": "Head, body, one feature. Everything else is noise. The player remembers the one exaggerated thing.",
+   "wrongWhy": "The other answers are not the rule. One exaggerated feature is what survives at small size."
+  },
+  {
+   "q": "How do you convey mood without a detailed face?",
+   "opts": [
+    "Use text",
+    "Posture — a forward lean reads as determined, a hunch reads as tired",
+    "Use colours only",
+    "Use a larger sprite"
+   ],
+   "correct": 1,
+   "why": "Posture communicates more than facial features. The body alone carries the mood.",
+   "wrongWhy": "The other answers are not the technique. Posture is what reads at a glance."
+  },
+  {
+   "q": "What should a character's backstory do?",
+   "opts": [
+    "Be read by the player",
+    "Justify the design decisions, not decorate them",
+    "Be long",
+    "Explain the world"
+   ],
+   "correct": 1,
+   "why": "One sentence that explains the silhouette. If it does not, the design and the story are fighting.",
+   "wrongWhy": "The other answers misunderstand the purpose. Backstory is a design tool, not content."
+  },
+  {
+   "q": "What is the rule about designing a character for its display size?",
+   "opts": [
+    "Make it large",
+    "A character seen at 32 pixels cannot have a detailed face — so do not draw one",
+    "Make it small",
+    "Use more colours"
+   ],
+   "correct": 1,
+   "why": "Design for the size the player actually sees. Detail that vanishes at game size is wasted.",
+   "wrongWhy": "The other answers are not the rule. Designing for display size prevents wasted detail."
+  }
+ ],
+ "60": [
+  {
+   "q": "What is the difference between CharacterBody2D, StaticBody2D, and Area2D?",
+   "opts": [
+    "They are the same",
+    "CharacterBody2D moves and blocks; StaticBody2D never moves but blocks; Area2D detects without blocking",
+    "They differ only in colour",
+    "Area2D moves; the others do not"
+   ],
+   "correct": 1,
+   "why": "Choosing correctly among these three is 90% of getting physics right. Area2D is a sensor — it detects but never blocks.",
+   "wrongWhy": "The other answers either collapse the distinction or reverse it. The blocking behaviour is the whole point."
+  },
+  {
+   "q": "What is the difference between is_action_pressed and is_action_just_pressed?",
+   "opts": [
+    "They are the same",
+    "is_action_pressed is true while held; is_action_just_pressed is true only on the frame it was pressed",
+    "just_pressed is slower",
+    "pressed only works with a keyboard"
+   ],
+   "correct": 1,
+   "why": "Use is_action_pressed for continuous things like running, and is_action_just_pressed for one-shot things like jumping.",
+   "wrongWhy": "The other answers misunderstand the distinction. The frame-level difference is what matters for jumps."
+  },
+  {
+   "q": "Why are signals better than direct references?",
+   "opts": [
+    "They are faster",
+    "They keep code decoupled — the player does not need to hold a reference to the health bar",
+    "They are easier to type",
+    "They use less memory"
+   ],
+   "correct": 1,
+   "why": "Decoupled code is easier to change. If the health bar is rebuilt, nothing that emits the signal needs to change.",
+   "wrongWhy": "The other answers are not the reason. Decoupling is the architectural benefit."
+  },
+  {
+   "q": "What is the difference between free() and queue_free()?",
+   "opts": [
+    "They are the same",
+    "queue_free() waits until the end of the frame, which is safer than free()",
+    "free() is slower",
+    "queue_free() only works on scenes"
+   ],
+   "correct": 1,
+   "why": "queue_free() defers deletion to a safe point. Using free() during a signal callback can crash the game.",
+   "wrongWhy": "The other answers are wrong. The safety of deferring deletion is the reason."
+  },
+  {
+   "q": "What is the difference between TileMapLayer and TileSet?",
+   "opts": [
+    "They are the same",
+    "TileSet is the collection of tiles and their data; TileMapLayer is the grid that places them",
+    "TileSet draws faster",
+    "TileMapLayer only works in 3D"
+   ],
+   "correct": 1,
+   "why": "The TileSet defines what a tile is; the TileMapLayer is where you paint them. Confusing them is a very common beginner error.",
+   "wrongWhy": "The other answers collapse or misstate the distinction."
+  },
+  {
+   "q": "What is a state machine's benefit?",
+   "opts": [
+    "It is faster",
+    "It replaces a tangle of if-statements with a list of states and the rules between them",
+    "It looks professional",
+    "It is required"
+   ],
+   "correct": 1,
+   "why": "A state machine makes every state and transition visible in one place. Bugs live in the transitions you forgot.",
+   "wrongWhy": "The other answers are not the benefit. Visibility is the architectural value."
+  },
+  {
+   "q": "What is the safest way to store a player's progress?",
+   "opts": [
+    "In a global variable",
+    "In a save file under user://, loaded on start",
+    "In the scene",
+    "In Project Settings"
+   ],
+   "correct": 1,
+   "why": "Progress must persist between runs, so it goes in a file under user://. Variables reset when the game closes.",
+   "wrongWhy": "The other answers do not persist. Only a file under user:// survives closing the game."
+  },
+  {
+   "q": "Why does the course recommend testing the exported build?",
+   "opts": [
+    "It is faster",
+    "Missing assets, broken paths, and audio that only works in the editor appear exclusively in the export",
+    "It is required by stores",
+    "It looks better"
+   ],
+   "correct": 1,
+   "why": "The export is what the player gets. Problems invisible in the editor will be visible to every player.",
+   "wrongWhy": "The other answers are not the reason. The export is the real product."
+  },
+  {
+   "q": "What three parts does a good core loop have?",
+   "opts": [
+    "Menu, play, credits",
+    "Goal, obstacle, reward",
+    "Intro, middle, end",
+    "Tutorial, level, boss"
+   ],
+   "correct": 1,
+   "why": "Kill the enemy (goal), it shoots back (obstacle), it drops coins (reward).",
+   "wrongWhy": "The other lists are structure or screens, not the functional parts of a loop."
+  },
+  {
+   "q": "What makes a reward actually a reward?",
+   "opts": [
+    "It is rare",
+    "It changes what the player does next",
+    "It makes a sound",
+    "It is displayed prominently"
+   ],
+   "correct": 1,
+   "why": "If the reward does not change the next loop, it is a score. A real reward alters the player's options.",
+   "wrongWhy": "The other answers are presentation or rarity, which do not change behaviour."
+  },
+  {
+   "q": "What is the most common core-loop mistake?",
+   "opts": [
+    "Making it too short",
+    "A loop fun for thirty seconds that then repeats identically forever",
+    "Too many rewards",
+    "An unclear goal"
+   ],
+   "correct": 1,
+   "why": "The fix is not more content but making the reward change the next loop.",
+   "wrongWhy": "The other answers are not the core problem."
+  },
+  {
+   "q": "Which juice technique gives the most feel for the least effort?",
+   "opts": [
+    "Detailed textures",
+    "Screen shake",
+    "Complex particles",
+    "Realistic lighting"
+   ],
+   "correct": 1,
+   "why": "A tiny camera offset on impact reads as weight. Highest impact-to-effort ratio in games.",
+   "wrongWhy": "The other options are expensive visual work with little feel benefit."
+  },
+  {
+   "q": "What are the two engines that keep players playing?",
+   "opts": [
+    "Graphics and sound",
+    "Mastery and curiosity",
+    "Levels and bosses",
+    "Coins and upgrades"
+   ],
+   "correct": 1,
+   "why": "Mastery: I am getting better and can feel it. Curiosity: I want to know what happens next.",
+   "wrongWhy": "The other answers are features or content, not psychological drivers."
+  },
+  {
+   "q": "What is the real difficulty dial in most platformers?",
+   "opts": [
+    "Enemy speed",
+    "Checkpoint spacing",
+    "Jump height",
+    "Enemy count"
+   ],
+   "correct": 1,
+   "why": "How far back the player restarts determines felt difficulty. It costs progress, not dignity.",
+   "wrongWhy": "The other options change challenge but not felt difficulty as directly."
+  },
+  {
+   "q": "What is the three-beat teaching pattern?",
+   "opts": [
+    "Introduce, repeat, reward",
+    "Safe introduction, test, twist",
+    "Text, practice, exam",
+    "Show, hide, show"
+   ],
+   "correct": 1,
+   "why": "Safe introduction (nothing can go wrong), test (must use it to proceed), twist (combines with something known).",
+   "wrongWhy": "The other patterns miss the essential test beat."
+  },
+  {
+   "q": "Why do games have quiet rooms between fights?",
+   "opts": [
+    "To save time",
+    "They are the release that makes tension meaningful",
+    "To let the player rest",
+    "To show off art"
+   ],
+   "correct": 1,
+   "why": "Tension needs release. Without the quiet, the fight stops feeling intense.",
+   "wrongWhy": "The other answers misunderstand pacing."
+  },
+  {
+   "q": "What is the rule about actions and reactions?",
+   "opts": [
+    "Only important actions need reactions",
+    "Every action must have a visible reaction, even a failed one",
+    "Reactions are optional",
+    "Only successes need reactions"
+   ],
+   "correct": 1,
+   "why": "If the player cannot tell 'it worked' from 'it did nothing', the game has lied.",
+   "wrongWhy": "The other answers allow silent failures, which is the problem the rule prevents."
+  },
+  {
+   "q": "What are the three rules of a good death?",
+   "opts": [
+    "Slow, dramatic, punishing",
+    "Readable, caused by choice, fast to restart",
+    "Random, quick, silent",
+    "Long, explainable, rewarding"
+   ],
+   "correct": 1,
+   "why": "The player should see what killed them, understand it was their decision, and restart quickly.",
+   "wrongWhy": "The other answers hide the cause or make the player wait."
+  },
+  {
+   "q": "What does variable jump height do?",
+   "opts": [
+    "Makes the jump higher",
+    "Lets a tap give a small hop and a hold give a full jump",
+    "Adds a double jump",
+    "Makes falling faster"
+   ],
+   "correct": 1,
+   "why": "Button hold time controls height. This single change makes platforming dramatically more controllable.",
+   "wrongWhy": "The other answers add abilities rather than expressive use of the existing input."
+  },
+  {
+   "q": "What is the cheapest way to make an enemy more interesting?",
+   "opts": [
+    "New art",
+    "Give it three states: idle, telegraph, attack",
+    "Make it faster",
+    "Add health"
+   ],
+   "correct": 1,
+   "why": "Three states with visible telegraphs create depth without new art.",
+   "wrongWhy": "The other answers change numbers or add art."
+  },
+  {
+   "q": "What is the cheapest worldbuilding in games?",
+   "opts": [
+    "A long story",
+    "An ambient character with one sprite, two waypoints, and one line",
+    "A large map",
+    "Many cutscenes"
+   ],
+   "correct": 1,
+   "why": "A villager walking between two points makes a world feel inhabited. The player's brain fills in the rest.",
+   "wrongWhy": "The other answers are expensive content."
+  },
+  {
+   "q": "What is the layering principle for density?",
+   "opts": [
+    "All characters interactive",
+    "A few close and interactive, many far and decorative",
+    "All far away",
+    "All identical"
+   ],
+   "correct": 1,
+   "why": "Near characters interact; far characters decorate. The far ones can be cheaper.",
+   "wrongWhy": "The other answers waste budget."
+  },
+  {
+   "q": "What is the failure mode of a progression system?",
+   "opts": [
+    "Too many rewards",
+    "A long gap with nothing, where the player quits",
+    "Too many upgrades",
+    "Too much currency"
+   ],
+   "correct": 1,
+   "why": "Players quit in the gaps, not at the hard parts.",
+   "wrongWhy": "The other answers are excess, not failure."
+  },
+  {
+   "q": "What is a boss fight's design brief?",
+   "opts": [
+    "A wall",
+    "A test of everything the player has learned",
+    "A damage race",
+    "An art showcase"
+   ],
+   "correct": 1,
+   "why": "Familiar mechanics under new pressure. A boss that teaches is a tutorial; one that surprises is a wall.",
+   "wrongWhy": "The other answers make the boss arbitrary."
+  },
+  {
+   "q": "What does a boss phase change provide?",
+   "opts": [
+    "Only escalation",
+    "Both escalation and a breather for the player",
+    "New art",
+    "A longer fight"
+   ],
+   "correct": 1,
+   "why": "Phases give visible progress, escalate, and provide a natural release between phases.",
+   "wrongWhy": "The other answers are incomplete or not the purpose."
+  },
+  {
+   "q": "What is the highest impact-to-effort juice technique?",
+   "opts": [
+    "Screen shake",
+    "Detailed particles",
+    "Realistic lighting",
+    "Complex animation"
+   ],
+   "correct": 0,
+   "why": "A tiny camera offset reads as weight. Most feel per line of code.",
+   "wrongWhy": "The other answers are expensive for the effect."
+  },
+  {
+   "q": "Why animate a state change rather than the object?",
+   "opts": [
+    "It is cheaper",
+    "A door that tweens open communicates more than one with a twelve-frame animation",
+    "It is easier to code",
+    "It looks smoother"
+   ],
+   "correct": 1,
+   "why": "Animating the transition communicates the change. The player reads the state, not the artwork.",
+   "wrongWhy": "The other answers are not the reason."
+  },
+  {
+   "q": "What is the recommended palette maximum?",
+   "opts": [
+    "Three: background, main, one accent",
+    "As many as possible",
+    "Two",
+    "Ten"
+   ],
+   "correct": 0,
+   "why": "Background, main, one accent. The accent is reserved for what must be noticed.",
+   "wrongWhy": "The other answers remove or destroy contrast."
+  },
+  {
+   "q": "Why does two frames at 6 fps beat six frames at 2 fps?",
+   "opts": [
+    "It is smoother",
+    "Frame timing matters more than frame count for readability",
+    "It is easier to export",
+    "It uses less memory"
+   ],
+   "correct": 1,
+   "why": "Timing carries the motion. Slow frame rates read as broken rather than smooth.",
+   "wrongWhy": "The other answers are technical, not perceptual."
+  },
+  {
+   "q": "What are Inkscape's three essential operations?",
+   "opts": [
+    "Copy, paste, delete",
+    "Union, difference, intersection",
+    "Rotate, scale, move",
+    "Fill, stroke, gradient"
+   ],
+   "correct": 1,
+   "why": "Union merges, difference cuts, intersection keeps the overlap. With those you can build any icon.",
+   "wrongWhy": "The other answers are basic editing tools."
+  },
+  {
+   "q": "Which asset library is CC0 and commercially safe?",
+   "opts": [
+    "OpenGameArt",
+    "Kenney.nl",
+    "itch.io",
+    "Freesound"
+   ],
+   "correct": 1,
+   "why": "Kenney.nl is public domain: no attribution, commercial use, no risk.",
+   "wrongWhy": "The other answers host mixed licences that must be checked per file."
+  },
+  {
+   "q": "Why keep an asset-credit file from day one?",
+   "opts": [
+    "It looks professional",
+    "Retroactive credit hunting is miserable",
+    "It is required by law",
+    "It helps organisation"
+   ],
+   "correct": 1,
+   "why": "When someone asks about an asset you need the answer immediately, and you cannot reconstruct it later.",
+   "wrongWhy": "The other answers are not the main reason."
+  },
+  {
+   "q": "How do you get character art without drawing or modelling?",
+   "opts": [
+    "Hire an artist",
+    "Render a 3D model into a flat 2D sprite with an orthographic camera",
+    "Copy from another game",
+    "Use a photograph"
+   ],
+   "correct": 1,
+   "why": "Same source means consistent style for free.",
+   "wrongWhy": "The other answers are impractical or illegal."
+  },
+  {
+   "q": "What is the advantage of code-drawn visuals?",
+   "opts": [
+    "They look better",
+    "They scale perfectly at every resolution",
+    "They are faster",
+    "They are easier to animate"
+   ],
+   "correct": 1,
+   "why": "A code-drawn bar looks identical at every resolution; an image-based one must be redrawn.",
+   "wrongWhy": "The other answers are not the advantage."
+  },
+  {
+   "q": "What is the foundation of generated textures?",
+   "opts": [
+    "Gradients",
+    "Noise — a grid of random values smoothed together",
+    "Patterns",
+    "Photographs"
+   ],
+   "correct": 1,
+   "why": "Threshold noise and you have a texture. Tile it and you have a level.",
+   "wrongWhy": "The other answers are not the foundation."
+  },
+  {
+   "q": "How do you get sound without making any?",
+   "opts": [
+    "Record your voice",
+    "Synthesis tools like sfxr generate effects from sliders",
+    "Copy from other games",
+    "Use silence"
+   ],
+   "correct": 1,
+   "why": "You do not need sound design knowledge. Sliders plus a randomise button is enough.",
+   "wrongWhy": "The other answers are impractical or illegal."
+  },
+  {
+   "q": "What is the 30-minute workflow's first step?",
+   "opts": [
+    "Add detail",
+    "Decide the silhouette and block it out in one colour",
+    "Choose colours",
+    "Export"
+   ],
+   "correct": 1,
+   "why": "Minutes 0-5 are silhouette only. No detail until the shape is right.",
+   "wrongWhy": "The other answers come later."
+  },
+  {
+   "q": "What is the most common trap in the first five minutes?",
+   "opts": [
+    "Wrong colours",
+    "Perfectionism — refining a silhouette that will be replaced",
+    "Wrong canvas size",
+    "Too many frames"
+   ],
+   "correct": 1,
+   "why": "Block the shape first; detail comes last.",
+   "wrongWhy": "The other answers are later problems."
+  },
+  {
+   "q": "What does 'steal like an artist' mean here?",
+   "opts": [
+    "Copy sprites",
+    "Study how things work, then apply the principle to your own work",
+    "Use only free assets",
+    "Avoid other games"
+   ],
+   "correct": 1,
+   "why": "Reference and study, do not copy. Understanding why lets you reproduce the effect legally and originally.",
+   "wrongWhy": "The other answers are literal or counterproductive."
+  },
+  {
+   "q": "What is the rule about an asset whose licence you cannot find?",
+   "opts": [
+    "Use it with credit",
+    "Do not use it — there is always another asset",
+    "Use it privately",
+    "Use it in a prototype"
+   ],
+   "correct": 1,
+   "why": "An unknown licence is a forbidden asset.",
+   "wrongWhy": "The other answers risk infringement."
+  },
+  {
+   "q": "Why is a limited palette easier than a large one?",
+   "opts": [
+    "Faster to load",
+    "Every colour must earn its place, so the important things stand out",
+    "It looks retro",
+    "Less memory"
+   ],
+   "correct": 1,
+   "why": "Restraint makes the accent work. With many colours nothing is special.",
+   "wrongWhy": "The other answers are technical."
+  },
+  {
+   "q": "What is the correct order of juice techniques by value?",
+   "opts": [
+    "Sound, particles, shake, hitstop, anticipation",
+    "Shake, hitstop, particles, sound, anticipation",
+    "Anticipation, sound, particles, hitstop, shake",
+    "Particles, sound, shake, hitstop, anticipation"
+   ],
+   "correct": 1,
+   "why": "Shake and hitstop give the most feel for the least work.",
+   "wrongWhy": "The other answers misorder the value."
+  },
+  {
+   "q": "What is the rule about juice and importance?",
+   "opts": [
+    "Use it everywhere",
+    "Juice marks what matters — do not use it everywhere",
+    "Only on bosses",
+    "Only on death"
+   ],
+   "correct": 1,
+   "why": "If a pickup and a boss death get the same reaction, nothing is special.",
+   "wrongWhy": "The other answers destroy the signalling function."
+  },
+  {
+   "q": "What is the recommended way to design a character without drawing?",
+   "opts": [
+    "Trace a photograph",
+    "Design from a verb — 'fast scout' implies a small, forward-leaning silhouette",
+    "Copy a character",
+    "Hire an artist"
+   ],
+   "correct": 1,
+   "why": "Begin with what the character does. The verb implies the silhouette.",
+   "wrongWhy": "The other answers are not the method."
+  },
+  {
+   "q": "What should a character's backstory do?",
+   "opts": [
+    "Be read by the player",
+    "Justify the design decisions, not decorate them",
+    "Be long",
+    "Explain the world"
+   ],
+   "correct": 1,
+   "why": "One sentence that explains the silhouette. If it does not, design and story are fighting.",
+   "wrongWhy": "The other answers misunderstand the purpose."
+  },
+  {
+   "q": "What is the rule about designing for display size?",
+   "opts": [
+    "Make it large",
+    "A character seen at 32 pixels cannot have a detailed face — do not draw one",
+    "Make it small",
+    "Use more colours"
+   ],
+   "correct": 1,
+   "why": "Design for the size the player actually sees. Detail that vanishes is wasted.",
+   "wrongWhy": "The other answers are not the rule."
+  },
+  {
+   "q": "What is the most important habit in the whole course?",
+   "opts": [
+    "Drawing every sprite",
+    "Finishing something small",
+    "Writing long documents",
+    "Making large games"
+   ],
+   "correct": 1,
+   "why": "One finished game teaches more than five abandoned ones, because finishing includes what tutorials skip.",
+   "wrongWhy": "The other answers are not the habit."
+  },
+  {
+   "q": "What is the purpose of a shipping checklist?",
+   "opts": [
+    "To look professional",
+    "The last ten percent is a checklist, not a skill — future you will be tired and forget things",
+    "It is required",
+    "To slow you down"
+   ],
+   "correct": 1,
+   "why": "Menu, pause, restart, game over, export, icon, credits. None of it is glamorous and all of it is required.",
+   "wrongWhy": "The other answers are not the purpose."
+  },
+  {
+   "q": "What is the fastest way to improve as a developer?",
+   "opts": [
+    "Watch more tutorials",
+    "Enter a game jam — a deadline forces you to finish",
+    "Read more books",
+    "Make a large game"
+   ],
+   "correct": 1,
+   "why": "A deadline is the fastest teacher available. Jams force finishing and originality.",
+   "wrongWhy": "The other answers are slower or avoid the finishing skill."
+  },
+  {
+   "q": "What is the final thing this course asks you to do?",
+   "opts": [
+    "Start a large project",
+    "Ship something small and make a second one",
+    "Learn 3D",
+    "Master shaders"
+   ],
+   "correct": 1,
+   "why": "Finish small things. The second game is much better than the first, and speed comes from repetition.",
+   "wrongWhy": "The other answers start too large or skip the finishing habit."
+  }
+ ]
+}
