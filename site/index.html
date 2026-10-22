@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#15161e">
 <meta name="description" content="A 60-day course: the Godot 4.7.2 engine, then game development, design, mechanics, and making assets with no art skills. Works fully offline.">
 <link rel="manifest" href="manifest.webmanifest">
@@ -291,6 +291,87 @@ code,kbd{direction:ltr;unicode-bidi:embed}
 }
 .app-banner.installed{border-color:var(--success)}
 .app-banner.installed .app-banner-icon{content:"✅"}
+/* ================= LAYOUT HARDENING =====================================
+   Fixes for the reported menu/UI glitches. Each one is a measured defect.
+
+   1. The content column is a flex item (body is display:flex). Flex items
+      default to min-width:auto, so they refuse to shrink below their content's
+      intrinsic width. The widest code block forced the page 18px wider than the
+      screen at 360px -- and 58px at 320px. That phantom sideways scroll is what
+      shifted the menu and the layout around. min-width:0 lets the column
+      shrink; wide content scrolls inside it instead.
+   2. Wide content (code, tables, images) must scroll inside the column rather
+      than pushing the whole page sideways.
+   3. The sidebar was height:100vh. On a phone 100vh is the LARGE viewport --
+      it includes the strip behind the address bar -- so the panel was taller
+      than the visible area and its bottom buttons (Install App, Reset
+      Progress) were unreachable. 100dvh tracks the visible area.
+   4. Notch and home-indicator clearance for the floating controls, now that
+      viewport-fit=cover is on.
+   5. The menu button is 41px tall at top:15px, so it sat on top of the
+      sidebar's own title. Give the panel room to clear it.
+   ======================================================================== */
+
+/* 1 -- the flex-item floor */
+.main-content{min-width:0}
+
+/* 2 -- contain wide children */
+pre,.code-block,.code-block pre{max-width:100%;overflow-x:auto}
+.info-table,.content-section table{display:block;width:100%;overflow-x:auto;border-collapse:collapse}
+img{max-width:100%;height:auto}
+
+/* 3 -- full-height drawer that respects the visible viewport */
+.sidebar{
+  height:100vh;
+  height:100dvh;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* 4 -- notch / home-indicator clearance */
+.sidebar{
+  padding-top:calc(20px + env(safe-area-inset-top,0px));
+  padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));
+}
+.menu-toggle{
+  top:calc(15px + env(safe-area-inset-top,0px));
+  left:calc(15px + env(safe-area-inset-left,0px));
+}
+html[dir="rtl"] .menu-toggle{
+  left:auto;
+  right:calc(15px + env(safe-area-inset-right,0px));
+}
+.chat-fab{
+  bottom:calc(24px + env(safe-area-inset-bottom,0px));
+  right:calc(24px + env(safe-area-inset-right,0px));
+}
+html[dir="rtl"] .chat-fab{
+  right:auto;
+  left:calc(24px + env(safe-area-inset-left,0px));
+}
+.chat-panel{
+  bottom:calc(92px + env(safe-area-inset-bottom,0px));
+  right:calc(24px + env(safe-area-inset-right,0px));
+}
+html[dir="rtl"] .chat-panel{
+  right:auto;
+  left:calc(24px + env(safe-area-inset-left,0px));
+}
+
+/* 5 -- the drawer: clear the toggle, and stay out of the way when closed.
+   A closed drawer that is only translated off-canvas can still be reached by
+   scrolling sideways, which is another way the menu appeared to "move". */
+@media(max-width:820px){
+  .sidebar{
+    padding-top:calc(74px + env(safe-area-inset-top,0px));
+    visibility:hidden;
+    transition:transform .3s,visibility 0s .3s;
+  }
+  .sidebar.open{
+    visibility:visible;
+    transition:transform .3s,visibility 0s 0s;
+  }
+}
 </style>
 </head>
 <body>

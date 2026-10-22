@@ -1,7 +1,7 @@
 /* MiniGodotCourse service worker — offline cache.
    Bump CACHE_VERSION whenever the course content changes, so installed apps
    pick up the new version. */
-const CACHE_VERSION = 'v60-1';
+const CACHE_VERSION = 'v60-2';
 const CACHE_NAME = 'minigodotcourse-' + CACHE_VERSION;
 
 /* Only same-origin assets are cached. The Groq API call is deliberately NOT
@@ -11,7 +11,8 @@ const ASSETS = [
   './index.html',
   './manifest.webmanifest',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './404.html'
 ];
 
 self.addEventListener('install', function(e){

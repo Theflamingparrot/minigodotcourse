@@ -57,6 +57,22 @@ It wipes `dist/`, writes it from `site/` + `course_img/`, then verifies the resu
 60 days, 8 banks, 400 questions, Arabic, offline, every asset resolves. Exits
 non-zero if anything fails. `dist/` is generated — never edit it.
 
+### UI test suite
+
+```
+cd <a folder with playwright-core installed>
+COURSE_PAGE=D:\Arcadia\dist\index.html OUT_DIR=. node D:\Arcadia\course\_build\_ui_test.js
+```
+
+Drives real Chrome at seven viewports (320px → 1440px), in English and Arabic,
+plus a simulated installed-app context. 167 checks: layout overflow, overlap,
+off-screen elements, the menu/sidebar/chat positions, and language round trips.
+See `_ui_report.md` for what it found and how it was fixed.
+
+> **When you change the page, bump `CACHE_VERSION` in `site/sw.js`.** Otherwise
+> anyone who already installed the app keeps getting the old page out of their
+> cache and never sees your change.
+
 ---
 
 ## 📲 The app
