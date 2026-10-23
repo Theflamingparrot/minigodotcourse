@@ -1,202 +1,218 @@
-# 🎮 Godot 4.7.2 + Game Development — 60-Day Course
+<div align="center">
 
-A complete, self-contained course website. **60 days**: the Godot 4.7.2 engine
-(Days 1–30), then game development — design, mechanics, and making assets with no
-art skills (Days 31–60).
+# 🎮 Godot 4.7.2 — The Complete 60-Day Game Development Course
 
-**It works fully offline.** Install it as an app and study with no Wi-Fi. Every
-screenshot is embedded in the page, so nothing is fetched.
+**Learn Godot and game development from zero — 60 days, 400 exam questions, in English and Arabic.**
+**Works completely offline. No sign-up, no account, no server.**
 
----
+### 👉 **[Start the course →](https://theflamingparrot.github.io/minigodotcourse/)**
 
-## 🚀 Deploy this repo
+[![Live site](https://img.shields.io/badge/▶_Start_the_course-online-7aa2f7?style=for-the-badge)](https://theflamingparrot.github.io/minigodotcourse/)
+[![Offline](https://img.shields.io/badge/📲_Installable-Works_offline-2dd4a0?style=for-the-badge)](https://theflamingparrot.github.io/minigodotcourse/)
+[![Languages](https://img.shields.io/badge/🌐_English_·_العربية-RTL_supported-9d7bf5?style=for-the-badge)](https://theflamingparrot.github.io/minigodotcourse/)
 
-**GitHub Pages**
-1. Settings → Pages → Deploy from a branch → `main` / `/(root)`.
-2. Add the custom domain `minigodotcourse.com` and enforce HTTPS.
+![The course in English](docs/en-desktop.png)
 
-**Netlify** — drag the repo onto `app.netlify.com/drop`.
-**Cloudflare Pages** — Create → Upload assets.
-
-No build step, no server. Just static files.
-
-> The install prompt and offline service worker need **HTTPS**. GitHub Pages,
-> Netlify and Cloudflare all provide it free. Opening the file straight from disk
-> works, but cannot install as an app.
+</div>
 
 ---
 
-## 📦 What's in this repo
+## What this is
 
-```
-Arcadia\
-├── site\                    ← the course
-│   ├── index.html           ← all 60 days, 400 questions, Arabic + English, the AI tutor
-│   ├── sw.js                ← offline cache
-│   ├── manifest.webmanifest
-│   ├── icon-192.png, icon-512.png
-│   └── _headers, robots.txt, sitemap.xml, 404.html   ← shipping extras
-├── course_img\              ← the 24 screenshots (embedded into the page at build time)
-├── course\_content\         ← the source content: English strings, Arabic dictionary,
-│                              and the 8 question banks
-└── course\_build\_check.py  ← build + verify script
-```
+A complete, self-contained course website. **60 days** taking you from having never
+opened a game engine to designing, building and shipping your own 2D games.
 
-**`site/` is the live page — edit it.** `course/_content/` holds the source copies of
-the text; they are already baked into the page, so the build does not read them.
+It is a **single static page**. No backend, no database, no build step to use it.
+Everything — all 60 lessons, all 400 exam questions, both languages, and every
+screenshot — lives inside one file. Install it as an app and it runs with **no
+internet at all**.
+
+> **Just want to learn?** Open **[the live site](https://theflamingparrot.github.io/minigodotcourse/)**
+> and start Day 1. You do not need GitHub for anything else.
 
 ---
 
-## 🔨 Rebuild
+## The course
 
-```
-python course/_build/_check.py
-```
+### Part 1 — The Engine (Days 1–30) · Godot 4.7.2
 
-It wipes `dist/`, writes it from `site/` + `course_img/`, then verifies the result:
-60 days, 8 banks, 400 questions, Arabic, offline, every asset resolves. Exits
-non-zero if anything fails. `dist/` is generated — never edit it.
+Install and editor · nodes and scenes · GDScript · input and movement · logic ·
+loops and arrays · **Exam 1** · signals · CharacterBody2D physics · collisions and
+layers · Area2D and triggers · Camera2D and viewports · animation · **Exam 2** ·
+UI and Control nodes · HUD and autoloads · audio · TileMapLayer · scene management ·
+particles · Tween · state machines · save and load · enemy AI · dialogue · menus ·
+polish · **Exam 3** · design fundamentals · **Exam 4**
 
-### UI test suite
+### Part 2 — Game Development (Days 31–60) · the craft, not the engine
 
-```
-cd <a folder with playwright-core installed>
-COURSE_PAGE=D:\Arcadia\dist\index.html OUT_DIR=. node D:\Arcadia\course\_build\_ui_test.js
-```
+| Days | Focus |
+|---|---|
+| **31–36** | **Design** — what a game is, the core loop, game feel and juice, player psychology, difficulty curves, level design without text, pacing |
+| **37** | **Exam 5** — Design basics |
+| **38–43** | **Mechanics** — coyote time, jump buffering, variable jump height, combat and telegraphs, NPCs, economy and progression, state machines, boss design |
+| **44** | **Exam 6** — Mechanics |
+| **45–50** | **Assets with no art skills** — why you don't need to draw, pixel art, vector art and free libraries, 3D-to-2D, procedural art, animation without animating |
+| **51** | **Exam 7** — Assets |
+| **52–59** | **Shipping and direction** — scoping a game you can finish, playtesting, iteration, case studies, designing a character you can't draw, maps, UI and onboarding |
+| **60** | **🎓 Grand Final** — everything, across all sixty days |
 
-Drives real Chrome at seven viewports (320px → 1440px), in English and Arabic,
-plus a simulated installed-app context. 167 checks: layout overflow, overlap,
-off-screen elements, the menu/sidebar/chat positions, and language round trips.
-See `_ui_report.md` for what it found and how it was fixed.
+Every teaching day ends with a **revision checklist of things to actually do**, a
+written exercise, and key notes. It assumes **no art skill and no programming
+background**.
 
-> **When you change the page, bump `CACHE_VERSION` in `site/sw.js`.** Otherwise
-> anyone who already installed the app keeps getting the old page out of their
-> cache and never sees your change.
-
----
-
-## 📲 The app
-
-Students press **⬇ Download App** and the course installs like a normal app — all
-60 days, 400 questions and their progress then work with no network at all.
-
-- **Android / Chrome:** the banner button shows the install prompt; if not, use the
-  menu (⋮) → *Add to Home screen*.
-- **iPhone / iPad:** Share → *Add to Home Screen*.
-- **Desktop:** the button explains the address-bar install option, or that
-  bookmarking works too.
-
-The button never fails silently — it always says exactly what to do instead.
-
----
-
-## The course in two parts
-
-**Part 1 — The Engine (Days 1–30)** · Godot 4.7.2
-Install, the editor, nodes and scenes, GDScript, input and movement, logic, loops,
-signals, CharacterBody2D physics, collisions and layers, Area2D, camera, animation,
-UI, HUD and autoloads, audio, tilemaps, scene management, particles, Tween, state
-machines, save and load, enemy AI, dialogue, menus, polish, and design. Exams on
-days 7, 14, 21 and 30.
-
-**Part 2 — Game Development (Days 31–60)** · not Godot — the craft of making games
-- **31–36 · Design:** what a game actually is, the core loop, game feel and juice,
-  player psychology, difficulty curves, level design without text, pacing.
-- **37 · Exam 5 — Design basics.**
-- **38–43 · Mechanics:** movement (coyote time, jump buffering, variable jump
-  height), combat and telegraphs, enemy and background characters, economy and
-  progression, state machines, boss design.
-- **44 · Exam 6 — Mechanics.**
-- **45–50 · Assets with no art skills:** why you don't need to draw, pixel art,
-  vector art and free libraries, 3D-to-2D and procedural art, animation without
-  animating, UI/sound/levels without skills.
-- **51 · Exam 7 — Assets.**
-- **52–59 · Shipping and direction:** scoping a game you can finish, playtesting,
-  iteration, case studies of how great games are made, designing a character you
-  cannot draw, maps and worlds, UI/menus/onboarding, the road from here.
-- **60 · 🎓 Grand Final — everything you have learnt**, across all sixty days.
-
-Every teaching day ends with a revision checklist of things to actually *do*, a
-written revision exercise, and key notes.
+<div align="center">
+<img src="docs/en-day.png" width="820" alt="A lesson, expanded: teaching text, a real Godot screenshot, and the day's task list">
+<br><em>Day 1, expanded — real screenshots from the official Godot docs, with the day's tasks below.</em>
+</div>
 
 ---
 
 ## Features
 
-**🌐 Arabic + English.** Toggle in the sidebar. Arabic switches the whole layout to
-RTL. Godot and programming vocabulary (`Node`, `Scene`, `Inspector`, `Viewport`,
-`GDScript`, `CharacterBody2D`, `TileMapLayer`, `Tween`, `Autoload`, `Signal`,
-`enum`, `match`, `delta`, `int`, `float`, `void`) stays in English inside the
-Arabic text, because the Godot editor itself is English — the student must
-recognise those words on screen. Game-design vocabulary (`core loop`, `game feel`,
-`juice`, `telegraph`, `coyote time`, `hitstop`, `squash and stretch`, `i-frames`,
-`parallax`, `silhouette`, `palette`, `playtest`, `tilemap`, `NPC`, `boss`, `HUD`,
-`state machine`, `hitbox`, `hurtbox`) is kept in English too.
+- **📲 Installable app, works offline.** Press *Download App* and it installs like
+  a normal app. After that, all 60 days, 400 questions and your progress work with
+  **no Wi-Fi**. Useful for studying on a train, or on a phone with no data plan.
+- **🌐 English and Arabic, with full RTL.** Switch in the sidebar. Godot and
+  programming vocabulary (`Node`, `Scene`, `Inspector`, `GDScript`,
+  `CharacterBody2D`, `TileMapLayer`, `Tween`, `Signal`, `enum`, `delta`…) stays in
+  English inside the Arabic text — because the Godot editor itself is English and
+  you have to recognise those words on screen. Game-design terms stay English too.
+- **🔒 Sequential unlock.** Day 1 is open; finish a day and the next one unlocks.
+  Locked days say which day to finish first. Exam days need **both** parts.
+- **🧪 Eight two-part exams.** Part A is a 50-question test — 3 attempts, 70% to
+  pass, then it locks. Part B is a mini-project, **locked until Part A passes**.
+- **📊 Progress tracking.** Days done, exams passed, average score, and a per-exam
+  breakdown. Finishing everything shows a completion banner.
+- **💬 Ask Groq.** A built-in tutor. Get a question wrong and a button appears —
+  *"Ask Groq why I got this wrong"* — which sends that question, your answer and
+  the correct one. It refuses to help during exams. **Needs your own free Groq API
+  key**; everything else works without it.
 
-**🔒 Sequential unlock.** Day 1 is open. Finish a day and the next unlocks. Locked
-days are dimmed, cannot be expanded, and say which day to finish first. Exam days
-require **both** parts before the next day unlocks.
-
-**✅ Daily revision tasks.** Every teaching day ends with a checklist of things to
-actually do, plus a written revision exercise. Ticking every box completes the day
-automatically.
-
-**📊 Progress.** Sidebar shows days completed, exams passed, average score, and a
-per-exam breakdown with the Part A score and whether Part B is submitted. Finishing
-all 60 days and all 8 exams shows a completion banner.
-
-**🧪 Eight two-part exams.** Part A is a 50-question written test (3 attempts, 70%
-to pass, then it locks). Part B is a mini-project that is **locked until Part A
-passes**. Both must pass before the exam day counts as done.
-
-**💬 Ask Groq.** A chat assistant in the corner. On any question the student gets
-wrong, a button appears beside it — **Ask Groq why I got this wrong** — which sends
-that question, the student's answer and the correct answer to the tutor. The tutor
-refuses to help during exams. *(Needs the network — the rest of the course does not.)*
+<div align="center">
+<img src="docs/ar-desktop.png" width="820" alt="The same course in Arabic, right-to-left">
+<br><em>Same course, Arabic, full RTL layout.</em>
+</div>
 
 ---
 
-## Setting up the AI tutor (one minute)
+## Install it as an app
 
-1. Go to **console.groq.com/keys** and create a free API key.
+| Platform | How |
+|---|---|
+| **Android / Chrome** | Press **⬇ Download App** — or menu (⋮) → *Add to Home screen* |
+| **iPhone / iPad** | Press **⬇ Download App** — or Share → *Add to Home Screen* |
+| **Desktop** | Press **⬇ Download App**; it explains the address-bar install option, or just bookmark it |
+
+<div align="center">
+<img src="docs/en-mobile.png" width="270" alt="The course on a phone">
+&nbsp;&nbsp;&nbsp;
+<img src="docs/ar-mobile.png" width="270" alt="The course on a phone, in Arabic">
+</div>
+
+> The install prompt and offline mode need **HTTPS** — GitHub Pages provides it
+> free, so the live link works.
+
+---
+
+## Using the AI tutor (optional, one minute)
+
+1. Get a free key at **[console.groq.com/keys](https://console.groq.com/keys)**.
 2. In the course, click **⚙️ API Settings** in the sidebar.
 3. Paste the key and press **Save Key**.
 
-The key is stored only in the student's browser and is sent only to Groq. **If they
-skip this, everything else in the course works without it.**
+Your key is stored **only in your own browser** and is sent **only to Groq**. It is
+never sent anywhere else and is not in this repository.
 
 ---
 
-## The page's internals, in case you need to edit
+## For developers
 
-- `INLINE_AR` — Arabic dictionary, keyed by the `data-i18n` id
-- `INLINE_UI` — UI strings, looked up by `t('English')`
-- `INLINE_MARKUP` — sidebar/chat/settings markup, keyed by `data-i18n-markup`
-- `INLINE_BANKS` — the 8 question banks, 50 questions each
-- `IMG_B64` — the embedded screenshots as data URIs (added at build time)
-- `EXAM_DAYS` — `[7,14,21,30,37,44,51,60]`
-- `TOTAL` — `60`
-- `sw.js` — bump `CACHE_VERSION` whenever the content changes
+This repo is also the source. `site/` is the course; `dist/` is generated.
 
-Progress is stored in the student's browser under the key `godot30_v2`.
+```
+Arcadia/
+├── site/                     ← the course page — EDIT THIS
+│   ├── index.html            60 days, 400 questions, Arabic + English, the tutor
+│   ├── sw.js                 offline cache
+│   ├── manifest.webmanifest  makes it installable
+│   ├── icon-192.png, icon-512.png
+│   └── _headers, robots.txt, sitemap.xml, 404.html
+├── course_img/               the 24 Godot documentation screenshots
+├── course/
+│   ├── _content/             source copies of the text, Arabic, question banks
+│   └── _build/
+│       ├── _check.py         build dist/ and verify it
+│       ├── _ui_test.js       browser UI test suite (167 checks)
+│       └── _ui_report.md     what the UI tests found and fixed
+├── docs/                     the screenshots in this README
+└── dist/                     generated — never edit
+```
+
+### Build
+
+```bash
+python course/_build/_check.py
+```
+
+Wipes `dist/`, rebuilds it from `site/` + `course_img/`, then verifies: 60 days,
+8 banks, 400 questions, Arabic present, images embedded and correctly typed, every
+shipped asset resolves. Exits non-zero on any failure.
+
+### UI tests
+
+Real Chrome, seven viewports from 320px to 1440px, both languages, plus a
+simulated installed-app context — checking overflow, overlap, off-screen elements,
+the menu/sidebar/chat positions and language round trips.
+
+```bash
+COURSE_PAGE=/path/to/dist/index.html OUT_DIR=. node course/_build/_ui_test.js
+```
+
+Current status: **167/167 pass**. See [`_ui_report.md`](course/_build/_ui_report.md).
+
+### Deploying
+
+`.github/workflows/pages.yml` builds `dist/` and publishes it to GitHub Pages on
+every push to `main`. **Do not publish `site/` directly** — the screenshots are
+embedded into the page by the build, so an unbuilt copy has 20 broken images.
+
+> ⚠️ **After editing the page, bump `CACHE_VERSION` in `site/sw.js`.** Otherwise
+> anyone who already installed the app keeps getting the old page from their cache.
 
 ---
 
-## Built from
+## Credits and honesty
 
-Part 1 follows the official Godot 4.7.2 documentation — introduction, step-by-step
-tutorials, GDScript reference, 2D, physics, UI, audio, animation, tilemaps,
-particles, and the 4.7 release notes. The screenshots are the real images from the
-Godot docs repository.
-
-Where the docs and reality disagree, the course follows reality — and says so. For
-example, `AudioStreamPlayer.area_mask` defaults to 0 in 4.7, which silently breaks
-reverb zones.
-
-Part 2 is game-development craft: design, psychology, mechanics, making assets
-without drawing, and shipping. It assumes no art skill and no programming
-background.
+- **Part 1** follows the official **[Godot 4.7.2 documentation](https://docs.godotengine.org/)**.
+  The screenshots are the real images from the Godot docs repository, used for
+  teaching purposes.
+- Where the docs and reality disagree, the course follows reality and says so —
+  e.g. `AudioStreamPlayer.area_mask` defaults to `0` in 4.7, which silently breaks
+  reverb zones.
+- **Part 2** is game-development craft: design, psychology, mechanics, making assets
+  without drawing, and shipping.
+- This course is an independent teaching resource and is **not affiliated with or
+  endorsed by the Godot Foundation**.
 
 ---
+
+## Licence
+
+Course text and code: **MIT** — see [LICENSE](LICENSE). Use it, fork it, teach with
+it, translate it.
+
+The Godot documentation screenshots in `course_img/` remain the property of the
+Godot project under their own licence (MIT / CC BY 4.0); they are included here as
+teaching illustrations from the official documentation.
+
+---
+
+<div align="center">
+
+**Found a mistake, or want a translation?** Open an
+[issue](https://github.com/Theflamingparrot/minigodotcourse/issues) — that is what
+it is there for.
 
 *Good luck. Now go make something only you would make.* 🌸
+
+</div>

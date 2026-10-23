@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🌐 Just want to take the course?
+    url: https://theflamingparrot.github.io/minigodotcourse/
+    about: You do not need GitHub to use the course — open the live site and start Day 1.
+  - name: 📖 How to build or edit the course
+    url: https://github.com/Theflamingparrot/minigodotcourse/blob/main/CONTRIBUTING.md
+    about: Where the text lives, how to run the build, and the rules of the course.
