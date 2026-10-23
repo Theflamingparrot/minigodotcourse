@@ -202,8 +202,8 @@ Course text and code: **MIT** — see [LICENSE](LICENSE). Use it, fork it, teach
 it, translate it.
 
 The Godot documentation screenshots in `course_img/` remain the property of the
-Godot project under their own licence (MIT / CC BY 4.0); they are included here as
-teaching illustrations from the official documentation.
+Godot project under their own licence. Details in
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 ---
 
